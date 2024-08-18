@@ -65,7 +65,7 @@ Para iniciar o servidor de desenvolvimento, execute:
 
 `npm run dev`
 
-O site estará disponível em http://lenziebarbosaadv.com[lenziebarbosaadv.com].
+O site estará disponível em http://lenziebarbosaadv.com.
 
 ---
 
