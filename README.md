@@ -41,7 +41,7 @@ A estrutura do projeto é organizada da seguinte forma:
 
 ---
 
-🚀 Instalação
+## 🚀 Instalação
 
 Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
@@ -59,7 +59,7 @@ Instale as dependências:
 
 ---
 
-💻 Uso
+## 💻 Uso
 
 Para iniciar o servidor de desenvolvimento, execute:
 
@@ -69,7 +69,7 @@ O site estará disponível em http://lenziebarbosaadv.com.
 
 ---
 
-✨ Funcionalidades
+## ✨ Funcionalidades
 
     Design Responsivo: O site é totalmente responsivo.
     Seção de Destaque: Slogan e imagens que refletem os valores do escritório.
@@ -80,7 +80,7 @@ O site estará disponível em http://lenziebarbosaadv.com.
 
 ---
 
-🎨 Paleta de Cores
+## 🎨 Paleta de Cores
 
 O site utiliza a seguinte paleta de cores:
 
@@ -93,7 +93,7 @@ O site utiliza a seguinte paleta de cores:
 
 ---
 
-📞 Contato
+## 📞 Contato
 
 Para mais informações, entre em contato:
 
