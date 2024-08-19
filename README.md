@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lenzi e Barbosa
 
-## Getting Started
+Bem-vindo ao repositório do site do escritório de advocacia Lenzi e Barbosa. Este projeto foi desenvolvido para criar uma presença online confiável e profissional para o escritório, refletindo seus valores de integridade, profissionalismo, cuidado e respeito pelos clientes.
 
-First, run the development server:
+## 🛠️ Tecnologias Utilizadas
+
+Este projeto utiliza as seguintes tecnologias:
+
+- **HTML5/CSS3**: Estrutura e estilização do site.
+- **JavaScript**: Interatividade e melhoria da experiência do usuário.
+- **React.js**: Criação de componentes dinâmicos.
+- **TailwindCSS**: Estilização com base em utilitários e design responsivo.
+- **Bun**: Execução rápida no lado do servidor.
+- **ShadCn**: Construção de interfaces modernas.
+- **EmailJS**: Integração de formulários de contato com serviços de e-mail.
+- **Framer Motion**: Animações e interações fluidas.
+
+---
+
+## 📂 Estrutura do Projeto
+
+A estrutura do projeto é organizada da seguinte forma:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── public
+│   ├── index.html          # Arquivo HTML principal
+│   ├── assets              # Imagens, ícones e outros assets
+│   └── favicon.ico         # Favicon do site
+├── src
+│   ├── components          # Componentes reutilizáveis do React
+│   ├── pages               # Componentes de páginas (Home, Sobre, Serviços, etc.)
+│   ├── styles              # Configurações personalizadas do TailwindCSS
+│   ├── services            # Integrações de serviços como EmailJS
+│   ├── App.js              # Arquivo principal da aplicação
+│   └── index.js            # Ponto de entrada da aplicação React
+├── .env                    # Variáveis de ambiente
+├── tailwind.config.js      # Configuração do TailwindCSS
+├── package.json            # Dependências e scripts do projeto
+└── README.mdx              # Documentação do projeto
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Instalação
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
-## Learn More
+Clone o repositório:
 
-To learn more about Next.js, take a look at the following resources:
+`git clone https://github.com/username/lenzi-barbosa-site.git`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Navegue até o diretório do projeto:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`cd lenzi-barbosa-site`
 
-## Deploy on Vercel
+Instale as dependências:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`npm install`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## 💻 Uso
+
+Para iniciar o servidor de desenvolvimento, execute:
+
+`npm run dev`
+
+O site estará disponível em http://lenziebarbosaadv.com.
+
+---
+
+## ✨ Funcionalidades
+
+    Design Responsivo: O site é totalmente responsivo.
+    Seção de Destaque: Slogan e imagens que refletem os valores do escritório.
+    Páginas de Serviços: Informações detalhadas sobre os serviços jurídicos.
+    Depoimentos: Clientes destacam confiança e credibilidade.
+    Formulário de Contato: Para consultas e interações com clientes.
+    Animações Suaves: Framer Motion para interações e animações.
+
+---
+
+## 🎨 Paleta de Cores
+
+O site utiliza a seguinte paleta de cores:
+
+    Cor Primária: #3B4F9D
+    Cores Secundárias:
+        #EDF6F8 (fundos)
+        #84AEB6 (destaques)
+        #0C77A9 (elementos secundários)
+        #583682 (ícones e detalhes)
+
+---
+
+## 📞 Contato
+
+Para mais informações, entre em contato:
+
+    Mirella Lenzi
+    Amanda Barbosa
+    Email: contato@lenziebarbosa.com
+    Site: www.lenziebarbosa.com
