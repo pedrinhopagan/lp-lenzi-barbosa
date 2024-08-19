@@ -1,22 +1,38 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/_ui/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const roboto = Roboto({
+	subsets: ["latin"],
+	variable: "--font-main",
+	weight: ["400"],
+});
+const montserrat = Montserrat({
+	subsets: ["latin"],
+	variable: "--font-alt",
+	weight: ["400", "700"],
+});
 export const metadata: Metadata = {
-  title: "Lenzi e Barbosa - Advocacia",
-  description: "Página de ",
+	title: "Lenzi e Barbosa - Advocacia",
+	description: "Página de ",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body
+				className={`${roboto.variable} ${montserrat.variable} bg-zinc-800 antialiased overflow-x-hidden`}
+			>
+				<Navbar />
+				{children}
+				{/* <Analytics /> */}
+				{/* <BackToTop /> */}
+			</body>
+		</html>
+	);
 }
