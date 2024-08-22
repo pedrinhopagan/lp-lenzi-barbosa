@@ -25,11 +25,11 @@ const config = {
 				background: "hsl(var(--background-color))",
 				foreground: "hsl(var(--foreground))",
 				primary: {
-					DEFAULT: "hsl(var(--primary))",
+					DEFAULT: "#3B4F9D",
 					foreground: "hsl(var(--primary-foreground))",
 				},
 				secondary: {
-					DEFAULT: "hsl(var(--secondary))",
+					DEFAULT: "#0C77A9",
 					foreground: "hsl(var(--secondary-foreground))",
 				},
 				destructive: {
@@ -68,39 +68,6 @@ const config = {
 					"900": "#2b454e",
 					"950": "#182d34",
 				},
-
-				"base-accent": "var(--accent-color)",
-				"base-title": "var(--title-color)",
-				"base-subtitle": "var(--subtitle-color)",
-				"base-text": "var(--text-color)",
-				"base-feature": "var(--feature-color)",
-				"base-hover": "var(--hover-color)",
-				"base-button": "var(--button-color)",
-				"base-input": "var(--input-color)",
-				"base-card": "var(--card-color)",
-				"base-fade": "var(--fade-color)",
-				"base-background": "var(--background-color)",
-
-				white: "var(--white-color)",
-				gray: "var(--gray-color)",
-				black: "var(--black-color)",
-
-				"default-title": "#272221",
-				"default-subtitle": "#403937",
-				"default-text": "#574F4D",
-				"default-feature": "#8D8686",
-				"default-hover": "#D7D5D5",
-				"default-button": "#E6E5E5",
-				"default-input": "#EDEDED",
-				"default-card": "#F3F2F2",
-				"default-background": "#FEFEFC",
-
-				"default-white": "#FFFFFF",
-				"default-gray": "#999999",
-				"default-black": "#010200",
-
-				fade: "#000000bb",
-				"blue-fade": "#262c40bb",
 			},
 			backgroundSize: {
 				auto: "auto",

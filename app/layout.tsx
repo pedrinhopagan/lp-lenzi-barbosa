@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Roboto } from "next/font/google";
+import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/_ui/Navbar";
 
@@ -26,7 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${roboto.variable} ${montserrat.variable} bg-zinc-800 antialiased overflow-x-hidden`}
+				className={`${roboto.variable} ${montserrat.variable} font-alt bg-zinc-800 antialiased overflow-x-hidden`}
 			>
 				<Navbar />
 				{children}
