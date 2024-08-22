@@ -45,16 +45,16 @@ export function Navbar() {
 	return (
 		<div className="fixed left-0 z-20 h-20 w-screen shadow-md transition-all duration-300 lg:block lg:h-24">
 			<nav className="flex h-full w-full ">
-				<div className="z-40 flex h-full w-full items-center justify-around gap-2 bg-[#00000010] px-6 text-base-title transition-all duration-300">
+				<div className="z-40 flex h-full w-full items-center justify-around gap-2 bg-[#00000080] px-6 text-base-title transition-all duration-300">
 					<div className="h-12 gap-1 lg:w-[240px]">
 						<Link
 							href="/"
 							className="flex-center h-full w-fit flex-col text-center font-alt"
 						>
 							<img
-								src="/png/logo_navbar.png"
+								src="/png/logo_gradient.png"
 								alt="Lenzi e Barbosa"
-								className="object-contain w-16"
+								className="object-contain w-20"
 							/>
 						</Link>
 					</div>
@@ -64,7 +64,7 @@ export function Navbar() {
 							{navLinks.map((item, i) => (
 								<li
 									key={item.id}
-									className="border-b-2 border-t-2 border-transparent text-base-title transition-all duration-300 hover:border-b-blue-500"
+									className="border-b-2 border-t-2 border-transparent text-zinc-100 transition-all duration-300 hover:border-b-primary"
 								>
 									<>
 										<LinkNavigation id={item.id}>{item.name}</LinkNavigation>
