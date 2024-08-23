@@ -69,6 +69,10 @@ const config = {
 					"950": "#182d34",
 				},
 			},
+			backgroundImage: {
+				gradient:
+					"linear-gradient(90deg, #583682, #3B4F9D, #0C77A9, #84AEB6, #EDF6F8)",
+			},
 			backgroundSize: {
 				auto: "auto",
 				cover: "cover",
