@@ -7,12 +7,7 @@ type Props = {
 
 export function Container({ children, className }: Props) {
 	return (
-		<section
-			className={cn(
-				"max-w-screen-xl section-spacing w-full min-h-[900px]",
-				className,
-			)}
-		>
+		<section className={cn("section-spacing w-full min-h-[900px]", className)}>
 			{children}
 		</section>
 	);

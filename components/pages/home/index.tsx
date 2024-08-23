@@ -5,6 +5,7 @@ export function HomePage() {
 		<>
 			<Components.Hero.Bg />
 			<Components.Hero.Content />
+			<Components.About.Content />
 		</>
 	);
 }

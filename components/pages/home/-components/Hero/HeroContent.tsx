@@ -8,7 +8,7 @@ import images from "@/contants/images";
 
 export function HeroContent() {
 	return (
-		<Container className="absolute top-1/2 -translate-y-1/2">
+		<Container className="absolute top-1/2 -translate-y-1/2 z-20">
 			<div className="relative w-full h-[900px] flex items-center">
 				<div className="flex flex-col justify-center items-end gap-12 w-full max-w-[470px] -translate-x-12">
 					<div className="flex flex-col gap-10">
