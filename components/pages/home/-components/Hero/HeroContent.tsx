@@ -8,21 +8,21 @@ import images from "@/contants/images";
 
 export function HeroContent() {
 	return (
-		<Container className="absolute top-1/2 -translate-y-1/2 z-20">
+		<Container className="absolute top-1/2 -translate-y-1/2">
 			<div className="relative w-full h-[900px] flex items-center">
-				<div className="flex flex-col justify-center items-end gap-12 w-full max-w-[470px] -translate-x-12">
+				<div className="flex flex-col justify-center items-center lg:items-end gap-12 w-full max-w-[470px] lg:-translate-x-12">
 					<div className="flex flex-col gap-10">
 						<Image
-							className="w-full brightness-0 invert"
+							className="w-full brightness-0 invert lg:invert-0"
 							alt="Logo Lenzi e Barbosa advocacia"
 							src={images.heroLogoLightBlue}
 						/>
 
-						<div className="flex flex-col gap-2 text-end">
-							<Title className="text-zinc-300 text-2xl font-semibold">
+						<div className="flex flex-col gap-2 text-center lg:text-end">
+							<Title className="text-zinc-100 lg:text-zinc-800 text-2xl font-semibold">
 								Protegendo Seus Direitos com Integridade e Dedicação
 							</Title>
-							<Text className="text-zinc-400 text-md">
+							<Text className="text-zinc-300 lg:text-zinc-700 text-md">
 								No escritório Lenzi e Barbosa, trabalhamos com profissionalismo
 								e respeito, oferecendo soluções jurídicas personalizadas para
 								cada cliente.
@@ -30,11 +30,12 @@ export function HeroContent() {
 						</div>
 					</div>
 
-					<div className="flex gap-8">
+					{/* Buttons */}
+					<div className="flex flex-col lg:flex-row gap-8">
 						<Button
 							size="lg"
 							variant="ghost"
-							className="border-zinc- text-zinc-200"
+							className="text-zinc-100 lg:text-zinc-800"
 						>
 							Conheça Nossos Serviços
 						</Button>

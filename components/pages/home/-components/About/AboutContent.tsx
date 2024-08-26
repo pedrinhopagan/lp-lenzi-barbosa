@@ -14,7 +14,7 @@ export function AboutContent() {
 				</div>
 
 				{/* Images */}
-				<div className="flex justify-evenly gap-10 pt-32">
+				<div className="flex flex-col lg:flex-row justify-evenly gap-10 pt-32">
 					{/* Mirella */}
 					<div className="flex flex-col gap-8 items-center justify-center">
 						{/* Image */}
@@ -23,7 +23,9 @@ export function AboutContent() {
 						{/* Name */}
 						<div className="flex flex-col items-center gap-2">
 							<Title className="text-2xl">Mirella Marson Lenzi</Title>
-							<Text>Especialista em Direito Penal e Processo Penal</Text>
+							<Text className="text-center">
+								Especialista em Direito Penal e Processo Penal
+							</Text>
 							<Button variant="ghost">Conheça Mais</Button>
 						</div>
 					</div>
@@ -37,7 +39,9 @@ export function AboutContent() {
 						{/* Name */}
 						<div className="flex flex-col items-center gap-2">
 							<Title className="text-2xl">Amanda Liza Barbosa</Title>
-							<Text>Especialista em Direito Civil e Processo Civil</Text>
+							<Text className="text-center">
+								Especialista em Direito Civil e Processo Civil
+							</Text>
 							<Button variant="ghost">Conheça Mais</Button>
 						</div>
 					</div>
