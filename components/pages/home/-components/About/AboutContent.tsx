@@ -2,6 +2,8 @@ import { Container } from "@/components/_ui/Container";
 import { Button } from "@/components/ui/button";
 import { Title } from "@/components/ui/title";
 import { Text } from "@/components/ui/text";
+import Image from "next/image";
+import images from "@/contants/images";
 
 export function AboutContent() {
 	return (
@@ -18,7 +20,11 @@ export function AboutContent() {
 					{/* Mirella */}
 					<div className="flex flex-col gap-8 items-center justify-center">
 						{/* Image */}
-						<div className="size-96 rounded-full bg-primary" />
+						<Image
+							className="object-cover size-64 rounded-full z-10"
+							src={images.aboutMirella}
+							alt="Amanda"
+						/>
 
 						{/* Name */}
 						<div className="flex flex-col items-center gap-2">
@@ -34,7 +40,11 @@ export function AboutContent() {
 					{/* Image */}
 					<div className="flex flex-col gap-8 items-center justify-center">
 						{/* Image */}
-						<div className="size-96 rounded-full bg-primary" />
+						<Image
+							className="object-cover size-64 rounded-full z-10"
+							src={images.aboutAmanda}
+							alt="Amanda"
+						/>
 
 						{/* Name */}
 						<div className="flex flex-col items-center gap-2">
