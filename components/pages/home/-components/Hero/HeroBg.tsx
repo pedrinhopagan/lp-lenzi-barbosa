@@ -3,7 +3,7 @@ import images from "@/contants/images";
 
 export function HeroBg() {
 	return (
-		<div className="relative w-screen h-full min-h-screen min-w-[100vw] opacity-80">
+		<div className="relative w-screen h-full min-h-screen min-w-[100vw] opacity-80 overflow-x-hidden">
 			<Image
 				src={images.heroImage}
 				alt="Hero"
