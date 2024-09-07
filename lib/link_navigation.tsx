@@ -6,21 +6,20 @@ import type { ReactNode } from "react";
 
 interface LinkNavigationProps {
 	id: string;
-	children?: ReactNode;
 	className?: string;
+	children: React.ReactNode;
+	onClick?: () => void;
 }
 
-export function LinkNavigation(props: LinkNavigationProps) {
+export function LinkNavigation({ id, className, children, onClick }: LinkNavigationProps) {
 	const router = useRouter();
 	return (
 		<Link
-			href="#"
-			onClick={() => {
-				router.push(`#${props.id}`);
-			}}
-			className={props.className}
+			href={`/#${id}`}
+			className={className}
+			onClick={onClick}
 		>
-			{props.children}
+			{children}
 		</Link>
 	);
 }

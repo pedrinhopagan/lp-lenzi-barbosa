@@ -1,11 +1,11 @@
-import { HomeComponents as Components } from "./-components";
+import { Hero } from "./-sections/Hero";
+import { About } from "./-sections/About";
 
 export function HomePage() {
 	return (
-		<>
-			<Components.Hero.Bg />
-			<Components.Hero.Content />
-			<Components.About.Content />
-		</>
-	);
+		<main className="home-page">
+			<Hero />
+			<About />
+		</main>
+	)
 }

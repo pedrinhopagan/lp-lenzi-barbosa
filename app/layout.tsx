@@ -26,7 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${roboto.variable} ${montserrat.variable} font-alt bg-zinc-800 antialiased overflow-x-hidden`}
+				className={`${roboto.variable} ${montserrat.variable} font-alt bg-zinc-100 antialiased overflow-x-hidden`}
 			>
 				<Navbar />
 				{children}
