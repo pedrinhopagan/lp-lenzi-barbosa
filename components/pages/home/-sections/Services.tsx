@@ -9,8 +9,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { useState } from "react"
 
 export function Services() {
+  const [openItem, setOpenItem] = useState<string | undefined>("item-0")
+
   const areasAtuacao = [
     { icon: Scale, title: "Direito Civil", description: "Consultoria e resolução de disputas contratuais, danos morais e questões de responsabilidade civil." },
     { icon: Briefcase, title: "Direito Trabalhista", description: "Defesa dos direitos de trabalhadores e empresas em ações judiciais e extrajudiciais." },
@@ -58,12 +61,20 @@ export function Services() {
 
           <div className="md:w-1/2">
             <h3 className="text-2xl font-bold mb-6 text-blue-700">Áreas de Atuação</h3>
-            <Accordion type="single" collapsible className="w-full" defaultValue="item-0">
+            <Accordion 
+              type="single" 
+              collapsible 
+              className="w-full" 
+              defaultValue="item-0"
+              onValueChange={(value) => setOpenItem(value)}
+            >
               {areasAtuacao.map((area, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
                   <AccordionTrigger className="text-xl font-bold text-blue-800 hover:text-blue-600 data-[state=open]:text-blue-400 transition-colors duration-300">
-                    <div className="flex items-center group">
-                      <area.icon className="w-8 h-8 text-blue-700 mr-4 group-data-[state=open]:text-blue-400 transition-colors duration-300" />
+                    <div className="flex items-center">
+                      <area.icon className={`w-8 h-8 mr-4 transition-colors duration-300 ${
+                        openItem === `item-${index}` ? 'text-blue-400' : 'text-blue-700'
+                      }`} />
                       <span className="group-data-[state=open]:text-blue-400 transition-colors duration-300">{area.title}</span>
                     </div>
                   </AccordionTrigger>

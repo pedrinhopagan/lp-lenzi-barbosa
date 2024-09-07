@@ -20,7 +20,7 @@ export function Navbar() {
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
 	return (
-		<nav className="fixed left-0 top-0 z-30 w-full bg-blue-950 shadow-md">
+		<nav className="fixed left-0 top-0 z-30 w-full bg-blue-700/40 backdrop-blur-md shadow-md">
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="flex h-20 items-center justify-between">
 					<div className="flex-shrink-0">
@@ -77,7 +77,7 @@ export function Navbar() {
 				</div>
 			</div>
 
-			<div className={`lg:hidden bg-blue-950 overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
+			<div className={`lg:hidden bg-blue-700/40 backdrop-blur-md overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
 				<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 					{navLinks.map((item) => (
 						<LinkNavigation
