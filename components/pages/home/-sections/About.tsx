@@ -7,6 +7,7 @@ import images from "@/contants/images";
 import Image from "next/image";
 import { Award, ChevronRight, Search, Star, Target } from "lucide-react";
 import { motion } from "framer-motion";
+import { useScroll } from "framer-motion";
 import { useState } from "react";
 import {
 	Dialog,
@@ -18,16 +19,16 @@ import {
 	DialogClose,
 } from "@/components/ui/dialog";
 import { lawyers } from "@/contants/home-page";
+import { WaveDivider } from "../-components/WaveDivider";
 
 export function About() {
-	const [selectedLawyer, setSelectedLawyer] = useState(null);
-
 	return (
-		<Container className="py-12 lg:py-24 bg-gradient-to-br from-blue-900 to-indigo-900">
+		<Container className="relative y-12 lg:py-24 bg-gradient-to-b from-blue-900 to-indigo-900">
+			<WaveDivider />
 			<span id="about" className="element-to-navigate" />
 
 			<div className="max-w-6xl mx-auto">
-				<div className="text-white p-12 rounded-3xl">
+				<div className="text-white p-2 md:p-8 xl:p-12 rounded-3xl">
 					<h4 className="text-sm font-semibold text-blue-300 text-center mb-2">
 						Nossa Equipe
 					</h4>
@@ -47,7 +48,7 @@ export function About() {
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: index * 0.2 }}
 							>
-								<Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-blue-800/30 backdrop-blur-sm border-blue-400">
+								<Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-blue-800/30 backdrop-blur-sm border-blue-400 group">
 									<CardContent className="p-0">
 										<div className="relative">
 											<Image
@@ -60,10 +61,22 @@ export function About() {
 												className="w-full h-64 object-cover"
 											/>
 											<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-												<h2 className="text-2xl font-bold text-white mb-2">
+												<motion.h2
+													initial={{ opacity: 0, y: 20 }}
+													whileInView={{ opacity: 1, y: 0 }}
+													transition={{ delay: 0.2 }}
+													className="text-2xl font-bold text-white mb-2"
+												>
 													{lawyer.name}
-												</h2>
-												<p className="text-indigo-200">{lawyer.description}</p>
+												</motion.h2>
+												<motion.p
+													initial={{ opacity: 0, y: 20 }}
+													whileInView={{ opacity: 1, y: 0 }}
+													transition={{ delay: 0.4 }}
+													className="text-indigo-200"
+												>
+													{lawyer.description}
+												</motion.p>
 											</div>
 										</div>
 										<div className="p-6">

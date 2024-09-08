@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import images from "@/contants/images";
 import { LinkNavigation } from "@/lib/link_navigation";
 import Image from "next/image";
+import { WaveDivider } from "../-components/WaveDivider";
 
 const img1 = images.heroImage;
 const img2 = images.logoCircleGradient;
