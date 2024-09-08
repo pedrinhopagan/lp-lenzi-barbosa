@@ -84,7 +84,7 @@ export function Services() {
 	];
 
 	return (
-		<Container className="py-24 bg-gradient-to-b from-zinc-100 to-zinc-50">
+		<Container className="py-12 lg:py-24 bg-gradient-to-b from-zinc-100 to-zinc-50">
 			<span id="services" className="element-to-navigate" />
 
 			<div className="max-w-6xl mx-auto">

@@ -37,7 +37,7 @@ export function Hero() {
 					</p>
 
 					{/* Título principal */}
-					<h1 className="text-3xl lg:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-500 text-center lg:text-left max-w-lg">
+					<h1 className="text-3xl lg:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-500 text-center lg:text-left max-w-lg pb-1">
 						Protegendo Seus Direitos com Integridade e Dedicação
 					</h1>
 
