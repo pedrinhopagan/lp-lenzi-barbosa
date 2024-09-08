@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Montserrat, Roboto } from "next/font/google";
+import { Montserrat, Playfair_Display, Roboto } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/_ui/Navbar";
 import { BackToTop } from "@/components/_ui/BackToTop";
 import { WppButton } from "@/components/_ui/WppButton";
 import { Footer } from "@/components/_ui/Footer";
 
-const roboto = Roboto({
+const playfair = Playfair_Display({
 	subsets: ["latin"],
 	variable: "--font-main",
 	weight: ["400"],
@@ -29,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${roboto.variable} ${montserrat.variable} font-alt bg-zinc-100 antialiased overflow-x-hidden`}
+				className={`${playfair.variable} ${montserrat.variable} font-alt bg-zinc-100 antialiased overflow-x-hidden`}
 			>
 				<Navbar />
 				{children}

@@ -12,7 +12,7 @@ import { testimonials } from "@/contants/home-page";
 
 export function Testimonials() {
 	return (
-		<Container className="py-16 lg:py-24 bg-gradient-to-b from-zinc-50 to-zinc-100">
+		<Container className="pt-16 pb-10 lg:pb-[72px] lg:pt-24 bg-gradient-to-b from-zinc-50 to-zinc-100">
 			<span id="testimonials" className="element-to-navigate" />
 
 			<div className="max-w-6xl mx-auto">

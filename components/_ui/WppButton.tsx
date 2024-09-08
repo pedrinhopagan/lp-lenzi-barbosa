@@ -2,11 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import { PHONE_NUMBER } from "@/contants/home-page";
 
 export function WppButton() {
 	return (
 		<a
-			href="https://wa.me/554799112233"
+			href={`https://wa.me/${PHONE_NUMBER}`}
 			target="_blank"
 			rel="noopener noreferrer"
 			className="fixed bottom-4 left-4 z-50"

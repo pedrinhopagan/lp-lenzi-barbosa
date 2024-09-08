@@ -18,7 +18,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 
 export function Services() {
 	const areasAtuacao = [
@@ -106,18 +106,22 @@ export function Services() {
 						</h3>
 						<div className="grid grid-cols-1 gap-6">
 							{diferenciais.map((diferencial, index) => (
-								<div
+								<motion.div
 									key={diferencial.title}
-									className="group bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 cursor-pointer border-l-4 border-blue-400"
+									initial={{ opacity: 0, y: 20 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									viewport={{ once: true }}
+									transition={{ duration: 0.5, delay: index * 0.2 }}
+									className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-400"
 								>
 									<div className="flex items-center mb-3">
-										<diferencial.icon className="w-10 h-10 text-blue-600 mr-3 transition-all duration-300" />
+										<diferencial.icon className="w-10 h-10 text-blue-600 mr-3 duration-300" />
 										<h4 className="text-xl font-bold text-blue-700">
 											{diferencial.title}
 										</h4>
 									</div>
 									<p className="text-blue-600">{diferencial.description}</p>
-								</div>
+								</motion.div>
 							))}
 						</div>
 					</div>
@@ -163,7 +167,7 @@ export function Services() {
 					</Button>
 				</div>
 
-				<p className="text-blue-500 text-center mt-8">
+				<p className="text-blue-500 text-center mt-8 italic">
 					Atendimento personalizado e eficiente, adaptado às suas necessidades,
 					onde quer que você esteja.
 				</p>
