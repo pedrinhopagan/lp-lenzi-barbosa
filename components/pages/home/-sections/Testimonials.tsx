@@ -9,11 +9,15 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 import { testimonials } from "@/contants/home-page";
+import { WaveDivider } from "../-components/WaveDivider";
 
 export function Testimonials() {
 	return (
-		<Container className="pt-16 pb-10 lg:pb-[72px] lg:pt-24 bg-gradient-to-b from-zinc-50 to-zinc-100">
+		<Container className="pt-16 pb-10 lg:pb-[72px] lg:pt-24 bg-gradient-to-b from-zinc-50 to-zinc-100 relative">
 			<span id="testimonials" className="element-to-navigate" />
+
+			{/* WaveDivider */}
+			<WaveDivider position="bottom" color="fill-blue-400" />
 
 			<div className="max-w-6xl mx-auto">
 				<h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-700 text-center">

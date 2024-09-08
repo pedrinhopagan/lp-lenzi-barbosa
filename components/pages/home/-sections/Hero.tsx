@@ -15,6 +15,9 @@ export function Hero() {
 			id="hero"
 			className="p-0 pt-8 relative overflow-hidden !max-h-[1200px] lg:min-h-[900px] h-fit"
 		>
+			{/* WaveDivider */}
+			<WaveDivider position="bottom" />
+
 			{/* Imagem de fundo */}
 			<Image
 				src={images.heroBgTransparent}

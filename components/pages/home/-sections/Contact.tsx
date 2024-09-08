@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import { PHONE_NUMBER } from "@/contants/home-page";
 
+// Definição do esquema de validação do formulário
 const formSchema = z.object({
 	nome: z.string().min(2, {
 		message: "O nome deve ter pelo menos 2 caracteres.",
@@ -42,7 +43,9 @@ const formSchema = z.object({
 	}),
 });
 
+// Componente principal da seção de Contato
 export function Contact() {
+	// Configuração do formulário usando react-hook-form e zod
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
@@ -53,6 +56,7 @@ export function Contact() {
 		},
 	});
 
+	// Função para lidar com o envio do formulário
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		console.log(values);
 		// Aqui você pode adicionar a lógica para enviar o formulário
@@ -63,28 +67,36 @@ export function Contact() {
 			<span id="contact" className="element-to-navigate" />
 
 			<div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24">
+				{/* Coluna de informações de contato */}
 				<div className="lg:w-1/2 space-y-8">
 					<h2 className="text-5xl lg:text-6xl font-bold text-white">
 						Vamos conversar sobre o seu caso
 					</h2>
+
 					<p className="text-xl text-blue-200">
 						Estamos aqui para ajudar. Entre em contato conosco e descubra como
 						podemos auxiliar você.
 					</p>
+
 					<div className="space-y-6">
+						{/* Informações de contato */}
 						<div className="flex items-center space-x-4">
 							<Mail className="w-6 h-6 text-blue-300" />
-							<span className="text-lg text-blue-200">
+							<a
+								href="mailto:contato@lenziebarbosa.com"
+								className="text-lg text-blue-200 hover:underline"
+							>
 								contato@lenziebarbosa.com
-							</span>
+							</a>
 						</div>
+
 						<div className="flex items-center space-x-4">
 							<Phone className="w-6 h-6 text-blue-300" />
 							<a
 								href={`tel:${PHONE_NUMBER}`}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-lg text-blue-200"
+								className="text-lg text-blue-200 hover:underline"
 							>
 								{PHONE_NUMBER.replace(
 									/(\d{2})(\d{2})(\d{1})(\d{4})(\d{4})/,
@@ -92,6 +104,7 @@ export function Contact() {
 								)}
 							</a>
 						</div>
+
 						<div className="flex flex-col space-y-2">
 							<div className="flex items-center space-x-4">
 								<MapPin className="w-6 h-6 text-blue-300 flex-shrink-0" />
@@ -102,6 +115,7 @@ export function Contact() {
 									região
 								</span>
 							</div>
+
 							<div className="flex items-center space-x-4">
 								<Globe className="w-6 h-6 text-blue-300 flex-shrink-0" />
 								<span className="text-lg text-blue-200">
@@ -111,6 +125,8 @@ export function Contact() {
 							</div>
 						</div>
 					</div>
+
+					{/* Botões de ação */}
 					<div className="flex space-x-4 mt-6">
 						<Button
 							asChild
@@ -125,6 +141,7 @@ export function Contact() {
 								WhatsApp
 							</a>
 						</Button>
+
 						<Button
 							asChild
 							variant="ghost"
@@ -142,12 +159,15 @@ export function Contact() {
 					</div>
 				</div>
 
+				{/* Coluna do formulário de contato */}
 				<div className="lg:w-1/2 bg-blue-800/30 backdrop-blur-sm p-8 rounded-lg shadow-lg">
 					<h3 className="text-2xl font-bold mb-6 text-white">
 						Envie-nos uma mensagem
 					</h3>
+
 					<Form {...form}>
 						<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+							{/* Campo de nome */}
 							<FormField
 								control={form.control}
 								name="nome"
@@ -165,6 +185,8 @@ export function Contact() {
 									</FormItem>
 								)}
 							/>
+
+							{/* Campo de e-mail */}
 							<FormField
 								control={form.control}
 								name="email"
@@ -182,6 +204,8 @@ export function Contact() {
 									</FormItem>
 								)}
 							/>
+
+							{/* Campo de telefone */}
 							<FormField
 								control={form.control}
 								name="telefone"
@@ -199,6 +223,8 @@ export function Contact() {
 									</FormItem>
 								)}
 							/>
+
+							{/* Campo de mensagem */}
 							<FormField
 								control={form.control}
 								name="mensagem"
@@ -216,6 +242,8 @@ export function Contact() {
 									</FormItem>
 								)}
 							/>
+
+							{/* Botão de envio */}
 							<Button
 								type="submit"
 								className="w-full bg-blue-100 hover:bg-blue-200 text-blue-900 font-bold py-3 px-4 rounded-md transition duration-300"

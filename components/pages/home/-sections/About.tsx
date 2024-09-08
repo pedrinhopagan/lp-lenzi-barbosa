@@ -24,7 +24,6 @@ import { WaveDivider } from "../-components/WaveDivider";
 export function About() {
 	return (
 		<Container className="relative py-12 lg:py-24 bg-gradient-to-b from-blue-900 to-indigo-900">
-			<WaveDivider />
 			<span id="about" className="element-to-navigate" />
 
 			<div className="max-w-6xl mx-auto">

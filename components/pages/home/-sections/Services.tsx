@@ -19,6 +19,7 @@ import {
 	AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
+import { WaveDivider } from "../-components/WaveDivider";
 
 export function Services() {
 	const areasAtuacao = [
@@ -82,7 +83,8 @@ export function Services() {
 	];
 
 	return (
-		<Container className="py-12 lg:py-24 bg-gradient-to-b from-zinc-100 to-zinc-50">
+		<Container className="py-12 lg:py-24 bg-gradient-to-b from-zinc-100 to-zinc-50 relative">
+			<WaveDivider inverted color="fill-indigo-900" />
 			<span id="services" className="element-to-navigate" />
 
 			<div className="max-w-6xl mx-auto">

@@ -4,9 +4,9 @@ import { Container } from "@/components/_ui/Container";
 import { LinkNavigation } from "@/lib/link_navigation";
 import Image from "next/image";
 import images from "@/contants/images";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "../ui/button";
-import { navLinks } from "@/contants/home-page";
+import { navLinks, PHONE_NUMBER } from "@/contants/home-page";
 
 export function Footer() {
 	return (
@@ -18,45 +18,48 @@ export function Footer() {
 					<div className="flex flex-col items-center lg:items-start">
 						{/* Logo */}
 						<Image
-							src={images.logoName}
+							src={images.logoNameLight}
 							alt="Lenzi e Barbosa"
-							className="h-12 w-auto brightness-0 invert mb-6"
+							className="h-12 w-auto mb-6"
 						/>
 						{/* Descrição do escritório */}
-						<p className="text-sm text-blue-200 text-center lg:text-left mb-6">
+						<p className="text-sm text-blue-300 text-center lg:text-left mb-6">
 							Advocacia especializada com integridade e dedicação.
 						</p>
 						{/* Informações de contato */}
-						<div className="flex flex-col items-center lg:items-start">
-							<h3 className="text-xl font-semibold mb-4 text-blue-100">
+						<div className="flex flex-col items-center lg:items-start gap-2">
+							<h3 className="text-xl font-semibold mb-4 text-blue-200">
 								Contato
 							</h3>
-							<p className="text-sm text-blue-200 mb-2">
-								contato@lenziebarbosa.com
-							</p>
-							<p className="text-sm text-blue-200 mb-6">(00) 1234-5678</p>
-							{/* Ícones de redes sociais */}
-							<div className="flex space-x-4">
+							<div className="flex items-center space-x-4">
+								<Mail className="w-5 h-5 text-blue-300" />
 								<a
-									href="https://www.facebook.com/lenziebarbosa"
-									className="text-blue-200 hover:text-white transition-colors"
-									aria-label="Facebook"
+									href="mailto:contato@lenziebarbosa.com"
+									className="text-sm text-blue-300 hover:underline"
 								>
-									<Facebook size={24} />
+									contato@lenziebarbosa.com
 								</a>
+							</div>
+							<div className="flex items-center space-x-4">
+								<Phone className="w-5 h-5 text-blue-300" />
+								<a
+									href={`tel:${PHONE_NUMBER}`}
+									className="text-sm text-blue-300 hover:underline"
+								>
+									{PHONE_NUMBER.replace(
+										/(\d{2})(\d{2})(\d{1})(\d{4})(\d{4})/,
+										"+$1 ($2) $3 $4-$5",
+									)}
+								</a>
+							</div>
+							<div className="flex items-center space-x-4">
+								<Instagram className="w-5 h-5 text-blue-300" />
 								<a
 									href="https://www.instagram.com/lenziebarbosa/"
-									className="text-blue-200 hover:text-white transition-colors"
+									className="text-sm text-blue-300 hover:underline"
 									aria-label="Instagram"
 								>
-									<Instagram size={24} />
-								</a>
-								<a
-									href="https://www.linkedin.com/in/lenziebarbosa/"
-									className="text-blue-200 hover:text-white transition-colors"
-									aria-label="LinkedIn"
-								>
-									<Linkedin size={24} />
+									@lenziebarbosa
 								</a>
 							</div>
 						</div>
@@ -64,11 +67,11 @@ export function Footer() {
 
 					{/* Coluna direita: Links rápidos */}
 					<div className="flex flex-col items-center lg:items-end">
-						<h3 className="text-xl font-semibold mb-6 text-blue-100 text-center lg:text-end">
+						<h3 className="text-xl font-semibold mb-6 text-blue-200 text-center lg:text-end">
 							Links Rápidos
 						</h3>
 						<nav>
-							<ul className="flex flex-col md:flex-wrap gap-4">
+							<ul className="flex flex-col md:flex-wrap gap-2">
 								{navLinks.map((link) => (
 									<li key={link.id}>
 										<Button
@@ -78,7 +81,7 @@ export function Footer() {
 										>
 											<LinkNavigation
 												id={link.id}
-												className="text-blue-200 hover:text-white transition-colors"
+												className="text-blue-100 hover:text-blue-200 transition-colors"
 											>
 												{link.name}
 											</LinkNavigation>
