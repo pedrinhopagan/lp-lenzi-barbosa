@@ -101,7 +101,7 @@ export function Services() {
 					confiança.
 				</p>
 
-				<div className="flex flex-col md:flex-row gap-4 md:gap-8 lg:gap-16">
+				<div className="flex flex-col md:flex-row gap-16">
 					<div className="md:w-1/2">
 						<h3 className="text-2xl font-bold mb-6 text-blue-700">
 							Nossos Diferenciais

@@ -59,38 +59,37 @@ export function About() {
 												height={300}
 												className="w-full h-64 object-cover"
 											/>
-											<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+											<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6">
 												<motion.h2
 													initial={{ opacity: 0, y: 20 }}
 													whileInView={{ opacity: 1, y: 0 }}
 													transition={{ delay: 0.2 }}
-													className="text-2xl font-bold text-white mb-2"
+													className="text-2xl font-bold text-white"
 												>
 													{lawyer.name}
 												</motion.h2>
-												<motion.p
-													initial={{ opacity: 0, y: 20 }}
-													whileInView={{ opacity: 1, y: 0 }}
-													transition={{ delay: 0.4 }}
-													className="text-indigo-200"
-												>
-													{lawyer.description}
-												</motion.p>
 											</div>
 										</div>
 										<div className="p-6">
+											<motion.p
+												initial={{ opacity: 0, y: 20 }}
+												whileInView={{ opacity: 1, y: 0 }}
+												transition={{ delay: 0.4 }}
+												viewport={{ once: true }}
+												className="text-indigo-200 mb-4"
+											>
+												{lawyer.description}
+											</motion.p>
 											<ul className="text-blue-200 mb-4">
-												{lawyer.specialties
-													.slice(0, 2)
-													.map((specialty, idx) => (
-														<li
-															key={specialty}
-															className="mb-2 flex items-center"
-														>
-															<ChevronRight className="mr-2 w-4 h-4 text-blue-300" />{" "}
-															{specialty}
-														</li>
-													))}
+												{lawyer.specialties.map((specialty, idx) => (
+													<li
+														key={specialty}
+														className="mb-2 flex items-center"
+													>
+														<ChevronRight className="mr-2 w-4 h-4 text-blue-300" />{" "}
+														{specialty}
+													</li>
+												))}
 											</ul>
 											<Dialog>
 												<DialogTrigger asChild>

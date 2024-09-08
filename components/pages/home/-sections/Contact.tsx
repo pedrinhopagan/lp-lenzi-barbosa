@@ -26,6 +26,9 @@ import {
 	Globe,
 } from "lucide-react";
 import { PHONE_NUMBER } from "@/contants/home-page";
+import emailjs from "@emailjs/browser";
+import { emailJSConfig } from "@/contants/home-page";
+import { useState } from "react";
 
 // Definição do esquema de validação do formulário
 const formSchema = z.object({
@@ -45,6 +48,8 @@ const formSchema = z.object({
 
 // Componente principal da seção de Contato
 export function Contact() {
+	const [isSubmitting, setIsSubmitting] = useState(false);
+
 	// Configuração do formulário usando react-hook-form e zod
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
@@ -56,10 +61,37 @@ export function Contact() {
 		},
 	});
 
-	// Função para lidar com o envio do formulário
+	// Função atualizada para lidar com o envio do formulário
 	function onSubmit(values: z.infer<typeof formSchema>) {
-		console.log(values);
-		// Aqui você pode adicionar a lógica para enviar o formulário
+		setIsSubmitting(true);
+		emailjs
+			.send(
+				emailJSConfig.serviceID,
+				emailJSConfig.templateID,
+				{
+					from_name: values.nome,
+					from_email: values.email,
+					phone: values.telefone,
+					message: values.mensagem,
+				},
+				emailJSConfig.publicKey,
+			)
+			.then((response) => {
+				console.log(
+					"E-mail enviado com sucesso!",
+					response.status,
+					response.text,
+				);
+				form.reset();
+				// Aqui você pode adicionar uma notificação de sucesso
+			})
+			.catch((err) => {
+				console.error("Erro ao enviar e-mail:", err);
+				// Aqui você pode adicionar uma notificação de erro
+			})
+			.finally(() => {
+				setIsSubmitting(false);
+			});
 	}
 
 	return (
@@ -243,12 +275,13 @@ export function Contact() {
 								)}
 							/>
 
-							{/* Botão de envio */}
+							{/* Botão de envio atualizado */}
 							<Button
 								type="submit"
 								className="w-full bg-blue-100 hover:bg-blue-200 text-blue-900 font-bold py-3 px-4 rounded-md transition duration-300"
+								disabled={isSubmitting}
 							>
-								Enviar Mensagem
+								{isSubmitting ? "Enviando..." : "Enviar Mensagem"}
 							</Button>
 						</form>
 					</Form>

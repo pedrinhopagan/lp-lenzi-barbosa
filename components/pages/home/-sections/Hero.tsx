@@ -6,8 +6,7 @@ import { LinkNavigation } from "@/lib/link_navigation";
 import Image from "next/image";
 import { WaveDivider } from "../-components/WaveDivider";
 
-const img1 = images.heroImage;
-const img2 = images.logoCircleGradient;
+const logo = images.logoCircleGradient;
 
 export function Hero() {
 	return (
@@ -18,7 +17,7 @@ export function Hero() {
 			{/* WaveDivider */}
 			<WaveDivider position="bottom" />
 
-			{/* Imagem de fundo */}
+			{/* Imagem de fundo transparente */}
 			<Image
 				src={images.heroBgTransparent}
 				alt="Escritório Lenzi e Barbosa"
@@ -79,14 +78,16 @@ export function Hero() {
 					</p>
 				</div>
 
+				{/* Logo */}
 				<Image
-					src={img2}
+					src={logo}
 					alt="Logo Lenzi e Barbosa"
 					width={100}
 					height={100}
 					className="object-contain absolute top-8 right-8 -z-10 hidden lg:block"
 				/>
 
+				{/* Imagem mobile */}
 				<div className="lg:hidden w-full h-[300px] sm:h-[440px] absolute bottom-0">
 					<Image
 						src={images.heroBgTransparentMobile}
@@ -96,6 +97,7 @@ export function Hero() {
 					/>
 				</div>
 
+				{/* Imagem desktop */}
 				<Image
 					src={images.heroBgTransparent}
 					alt="Escritório Lenzi e Barbosa"

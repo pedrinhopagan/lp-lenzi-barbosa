@@ -13,7 +13,7 @@ export function WaveDivider({
 }: Props) {
 	return (
 		<div
-			className={`absolute z-20 left-0 w-full overflow-hidden leading-none
+			className={`absolute z-30 left-0 w-full overflow-hidden leading-none
         ${inverted ? "" : "rotate-180 "}
         ${position === "top" ? "top-0" : "bottom-0"}
 `}

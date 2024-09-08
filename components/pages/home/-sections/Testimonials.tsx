@@ -19,31 +19,34 @@ export function Testimonials() {
 			{/* WaveDivider */}
 			<WaveDivider position="bottom" color="fill-blue-400" />
 
-			<div className="max-w-6xl mx-auto">
-				<h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-700 text-center">
-					O Que Nossos Clientes Dizem
-				</h2>
+			<div className="max-w-7xl mx-auto">
+				{/* Header */}
+				<div className="max-w-6xl mx-auto">
+					<h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-700 text-center">
+						O Que Nossos Clientes Dizem
+					</h2>
 
-				<p className="text-blue-600 text-center mb-12 max-w-3xl mx-auto">
-					A confiança de nossos clientes é o nosso maior patrimônio. Veja o que
-					algumas pessoas têm a dizer sobre a experiência de trabalhar com o
-					escritório Lenzi e Barbosa. Estamos sempre comprometidos em fornecer
-					um serviço jurídico de excelência, focado em resultados e no bem-estar
-					de nossos clientes.
-				</p>
+					<p className="text-blue-600 text-center mb-12 max-w-3xl mx-auto">
+						A confiança de nossos clientes é o nosso maior patrimônio. Veja o
+						que algumas pessoas têm a dizer sobre a experiência de trabalhar com
+						o escritório Lenzi e Barbosa. Estamos sempre comprometidos em
+						fornecer um serviço jurídico de excelência, focado em resultados e
+						no bem-estar de nossos clientes.
+					</p>
+				</div>
 
 				<Carousel
 					opts={{
-						align: "start",
+						align: "center",
 						loop: true,
 					}}
-					className="w-full max-w-5xl mx-auto"
+					className="w-full mx-auto"
 				>
 					<CarouselContent>
 						{testimonials.map((testimonial, index) => (
 							<CarouselItem
 								key={testimonial.author}
-								className="md:basis-1/2 lg:basis-1/3"
+								className="basis-[85%] sm:basis-[45%] lg:basis-[30%] pl-2 md:pl-4"
 							>
 								<div className="p-1">
 									<Card className="bg-white border-blue-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">

@@ -13,7 +13,7 @@ export function Footer() {
 		<footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white">
 			<Container className="py-16">
 				{/* Grid principal do footer */}
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
 					{/* Coluna esquerda: Logo, descrição e informações de contato */}
 					<div className="flex flex-col items-center lg:items-start">
 						{/* Logo */}
@@ -27,7 +27,7 @@ export function Footer() {
 							Advocacia especializada com integridade e dedicação.
 						</p>
 						{/* Informações de contato */}
-						<div className="flex flex-col items-center lg:items-start gap-2">
+						<div className="flex flex-col items-center lg:items-start gap-6">
 							<h3 className="text-xl font-semibold mb-4 text-blue-200">
 								Contato
 							</h3>
@@ -93,7 +93,7 @@ export function Footer() {
 					</div>
 				</div>
 				{/* Rodapé com direitos autorais */}
-				<div className="w-full mt-12 pt-8 border-t border-blue-800 text-center flex flex-col md:flex-row justify-center lg:justify-between items-center gap-4">
+				<div className="w-full mt-12 pt-8 border-t border-blue-800 text-center flex flex-col md:flex-row justify-center lg:justify-between items-center gap-4 max-w-7xl mx-auto">
 					<p className="text-sm text-blue-300">
 						© {new Date().getFullYear()} Lenzi e Barbosa Advocacia.
 					</p>
