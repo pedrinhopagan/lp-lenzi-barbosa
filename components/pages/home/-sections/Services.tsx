@@ -85,6 +85,8 @@ export function Services() {
 
 	return (
 		<Container className="py-24 bg-gradient-to-b from-zinc-100 to-zinc-50">
+			<span id="services" className="element-to-navigate" />
+
 			<div className="max-w-6xl mx-auto">
 				<h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-700 text-center">
 					Nossos Serviços

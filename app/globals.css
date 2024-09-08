@@ -100,4 +100,8 @@
   .courtain-piece {
     @apply h-[10%] bg-base-fade
   }
+
+  .element-to-navigate {
+    @apply pt-12 md:pt-24 lg:pt-32
+  }
 }

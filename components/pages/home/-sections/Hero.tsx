@@ -9,7 +9,10 @@ const img2 = images.logoCircleGradient;
 
 export function Hero() {
 	return (
-		<Container className="p-0 pt-8 lg:pt-16 relative overflow-hidden !max-h-[1200px]">
+		<Container
+			id="hero"
+			className="p-0 pt-8 lg:pt-16 relative overflow-hidden !max-h-[1200px]"
+		>
 			{/* Imagem de fundo */}
 			<Image
 				src={images.heroBgTransparent}

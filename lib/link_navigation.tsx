@@ -1,9 +1,3 @@
-"use client";
-
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import type { ReactNode } from "react";
-
 interface LinkNavigationProps {
 	id: string;
 	className?: string;
@@ -11,15 +5,26 @@ interface LinkNavigationProps {
 	onClick?: () => void;
 }
 
-export function LinkNavigation({ id, className, children, onClick }: LinkNavigationProps) {
-	const router = useRouter();
+export function LinkNavigation({
+	id,
+	className,
+	children,
+	onClick,
+}: LinkNavigationProps) {
+	const handleClick = (e: React.MouseEvent) => {
+		e.preventDefault();
+		const element = document.getElementById(id);
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+		if (onClick) {
+			onClick();
+		}
+	};
+
 	return (
-		<Link
-			href={`/#${id}`}
-			className={className}
-			onClick={onClick}
-		>
+		<a href={`#${id}`} className={className} onClick={handleClick}>
 			{children}
-		</Link>
+		</a>
 	);
 }

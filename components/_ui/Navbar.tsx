@@ -7,9 +7,9 @@ import images from "@/contants/images";
 import Image from "next/image";
 
 const navLinks = [
-	{ id: "/", name: "Início" },
+	{ id: "hero", name: "Início" },
 	{ id: "about", name: "Sobre" },
-	{ id: "features", name: "Áreas de atuação" },
+	{ id: "services", name: "Áreas de atuação" },
 	{ id: "projects", name: "Projetos" },
 	{ id: "contact", name: "Contato" },
 ];
@@ -61,7 +61,6 @@ export function Navbar() {
 									key={item.id}
 									id={item.id}
 									className="text-blue-100 hover:text-white hover:bg-blue-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
-									onClick={toggleMenu}
 								>
 									{item.name}
 								</LinkNavigation>

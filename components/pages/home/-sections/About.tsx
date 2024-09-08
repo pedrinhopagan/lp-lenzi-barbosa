@@ -26,6 +26,8 @@ import { lawyers } from "@/contants/home-page";
 export function About() {
 	return (
 		<Container className="py-12 lg:py-24">
+			<span id="about" className="element-to-navigate" />
+
 			<div className="max-w-6xl mx-auto">
 				<h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-500 text-center">
 					Nossa Equipe, Seu Suporte Jurídico
