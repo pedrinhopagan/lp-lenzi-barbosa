@@ -56,12 +56,12 @@ export function Contact() {
 	}
 
 	return (
-		<Container className="py-16 lg:py-24 bg-gradient-to-b from-zinc-50 to-zinc-100">
+		<Container className="py-16 lg:py-24 bg-gradient-to-b from-zinc-100 to-zinc-50">
 			<span id="contact" className="element-to-navigate" />
 
 			<div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24">
 				<div className="lg:w-1/2 space-y-8">
-					<h2 className="text-5xl lg:text-6xl font-bold text-blue-700 leading-tight">
+					<h2 className="text-5xl lg:text-6xl font-bold text-blue-700 lg:leading-tight">
 						Vamos conversar sobre o seu caso
 					</h2>
 					<p className="text-xl text-blue-600">

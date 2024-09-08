@@ -102,6 +102,6 @@
   }
 
   .element-to-navigate {
-    @apply pt-12 md:pt-24 lg:pt-32
+    @apply pt-24 lg:pt-32
   }
 }

@@ -5,14 +5,7 @@ import Link from "next/link";
 import { LinkNavigation } from "@/lib/link_navigation";
 import images from "@/contants/images";
 import Image from "next/image";
-
-const navLinks = [
-	{ id: "hero", name: "Início" },
-	{ id: "about", name: "Sobre" },
-	{ id: "services", name: "Áreas de atuação" },
-	{ id: "projects", name: "Projetos" },
-	{ id: "contact", name: "Contato" },
-];
+import { navLinks } from "@/contants/home-page";
 
 export function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
