@@ -9,10 +9,7 @@ type Props = HTMLAttributes<HTMLElement> & {
 export function Container({ children, className, ...props }: Props) {
 	return (
 		<section
-			className={cn(
-				"element-to-navigate section-spacing w-full mx-auto",
-				className,
-			)}
+			className={cn("section-spacing w-full mx-auto", className)}
 			{...props}
 		>
 			{children}

@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 });
 export const metadata: Metadata = {
 	title: "Lenzi e Barbosa - Advocacia",
-	description: "Página de ",
+	description: "Escritório de advocacia com mais de 10 anos de experiência.",
 };
 
 export default function RootLayout({

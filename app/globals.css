@@ -102,6 +102,6 @@
   }
 
   .element-to-navigate {
-    @apply pt-32
+    @apply -translate-y-16 lg:-translate-y-4 absolute top-0 left-0 right-0 bottom-0 size-1 bg-none
   }
 }

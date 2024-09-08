@@ -64,6 +64,7 @@ export function About() {
 													initial={{ opacity: 0, y: 20 }}
 													whileInView={{ opacity: 1, y: 0 }}
 													transition={{ delay: 0.2 }}
+													viewport={{ once: true }}
 													className="text-2xl font-bold text-white"
 												>
 													{lawyer.name}
@@ -82,13 +83,17 @@ export function About() {
 											</motion.p>
 											<ul className="text-blue-200 mb-4">
 												{lawyer.specialties.map((specialty, idx) => (
-													<li
+													<motion.li
 														key={specialty}
+														initial={{ opacity: 0, y: 20 }}
+														whileInView={{ opacity: 1, y: 0 }}
+														transition={{ delay: 0.6 + idx * 0.2 }}
+														viewport={{ once: true }}
 														className="mb-2 flex items-center"
 													>
 														<ChevronRight className="mr-2 w-4 h-4 text-blue-300" />{" "}
 														{specialty}
-													</li>
+													</motion.li>
 												))}
 											</ul>
 											<Dialog>
