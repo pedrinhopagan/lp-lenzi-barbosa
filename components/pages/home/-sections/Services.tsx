@@ -21,8 +21,6 @@ import {
 import { useState } from "react";
 
 export function Services() {
-	const [openItem, setOpenItem] = useState<string | undefined>("item-0");
-
 	const areasAtuacao = [
 		{
 			icon: Scale,
@@ -88,11 +86,14 @@ export function Services() {
 			<span id="services" className="element-to-navigate" />
 
 			<div className="max-w-6xl mx-auto">
-				<h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-700 text-center">
+				<h4 className="text-sm font-semibold text-blue-500 text-center mb-2">
 					Nossos Serviços
+				</h4>
+				<h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-400 text-center">
+					Soluções Jurídicas Personalizadas
 				</h2>
 
-				<p className="text-blue-600 text-center mb-12">
+				<p className="text-blue-600 text-center mb-12 max-w-2xl mx-auto">
 					No escritório Lenzi e Barbosa, oferecemos soluções jurídicas
 					personalizadas e eficientes, com atendimento especializado e de
 					confiança.
@@ -130,29 +131,25 @@ export function Services() {
 							collapsible
 							className="w-full"
 							defaultValue="item-0"
-							onValueChange={(value) => setOpenItem(value)}
 						>
 							{areasAtuacao.map((area, index) => (
 								<AccordionItem key={area.title} value={`item-${index}`}>
 									<AccordionTrigger className="text-xl font-bold text-blue-800 hover:text-blue-600 data-[state=open]:text-blue-400 transition-colors duration-300">
 										<div className="flex items-center">
-											<area.icon
-												className={`w-8 h-8 mr-4 transition-colors duration-300 ${
-													openItem === `item-${index}`
-														? "text-blue-400"
-														: "text-blue-700"
-												}`}
-											/>
+											<area.icon className="w-8 h-8 mr-4 transition-colors duration-300" />
 											<span className="group-data-[state=open]:text-blue-400 transition-colors duration-300">
 												{area.title}
 											</span>
 										</div>
 									</AccordionTrigger>
 									<AccordionContent className="text-blue-700">
-										{area.description}
-										<div className="mt-4 text-blue-600 font-semibold">
+										<p>{area.description}</p>
+										<Button
+											variant="link"
+											className="mt-2 text-blue-500 hover:text-blue-700 p-0"
+										>
 											Saiba mais →
-										</div>
+										</Button>
 									</AccordionContent>
 								</AccordionItem>
 							))}

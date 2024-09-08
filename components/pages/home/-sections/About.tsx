@@ -23,7 +23,7 @@ import { WaveDivider } from "../-components/WaveDivider";
 
 export function About() {
 	return (
-		<Container className="relative y-12 lg:py-24 bg-gradient-to-b from-blue-900 to-indigo-900">
+		<Container className="relative py-12 lg:py-24 bg-gradient-to-b from-blue-900 to-indigo-900">
 			<WaveDivider />
 			<span id="about" className="element-to-navigate" />
 
@@ -101,7 +101,40 @@ export function About() {
 													</Button>
 												</DialogTrigger>
 												<DialogContent className="max-w-2xl bg-blue-900 text-white">
-													{/* Conteúdo do diálogo permanece o mesmo */}
+													<DialogHeader>
+														<DialogTitle className="text-2xl font-bold">
+															{lawyer.name}
+														</DialogTitle>
+														<DialogDescription className="text-blue-200">
+															{lawyer.title}
+														</DialogDescription>
+													</DialogHeader>
+													<div className="mt-4">
+														<h4 className="text-lg font-semibold mb-2">
+															Formação
+														</h4>
+														<ul className="list-disc list-inside text-blue-200">
+															{lawyer.education.map((edu) => (
+																<li key={edu}>{edu}</li>
+															))}
+														</ul>
+													</div>
+													<div className="mt-4">
+														<h4 className="text-lg font-semibold mb-2">
+															Áreas de Atuação
+														</h4>
+														<ul className="grid grid-cols-2 gap-2">
+															{lawyer.expertise.map((exp) => (
+																<li
+																	key={exp}
+																	className="flex items-center text-blue-200"
+																>
+																	<ChevronRight className="mr-2 w-4 h-4 text-blue-400" />
+																	{exp}
+																</li>
+															))}
+														</ul>
+													</div>
 												</DialogContent>
 											</Dialog>
 										</div>
