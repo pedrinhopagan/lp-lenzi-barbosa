@@ -33,7 +33,7 @@ export function Navbar() {
 	return (
 		<nav
 			ref={navRef}
-			className="section-spacing fixed left-0 top-0 z-40 w-full bg-blue-900/70 backdrop-blur-md shadow-md transition-colors duration-300"
+			className="section-spacing fixed left-0 top-0 z-40 w-full bg-blue-900/90 backdrop-blur-md shadow-md transition-colors duration-300"
 		>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="flex h-20 items-center justify-between">

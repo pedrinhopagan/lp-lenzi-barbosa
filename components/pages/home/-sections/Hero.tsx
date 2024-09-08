@@ -1,5 +1,4 @@
 import { Container } from "@/components/_ui/Container";
-import { Navbar } from "@/components/_ui/Navbar";
 import { Button } from "@/components/ui/button";
 import images from "@/contants/images";
 import { LinkNavigation } from "@/lib/link_navigation";
@@ -26,7 +25,7 @@ export function Hero() {
 			/>
 
 			{/* Gradiente de fundo */}
-			<div className="absolute inset-0 bg-gradient-to-b from-blue-500/50 to-zinc-100 z-10 max-h-[1200px]" />
+			<div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 to-zinc-100 z-10 max-h-[1200px]" />
 
 			{/* Conteúdo principal */}
 			<div

@@ -47,7 +47,7 @@ export function About() {
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: index * 0.2 }}
 							>
-								<Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-blue-800/30 backdrop-blur-sm border-blue-400 group">
+								<Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-blue-800/30 backdrop-blur-sm border-white group">
 									<CardContent className="p-0">
 										<div className="relative">
 											<Image
@@ -71,17 +71,17 @@ export function About() {
 												</motion.h2>
 											</div>
 										</div>
-										<div className="p-6">
+										<div className="p-6 bg-zinc-100">
 											<motion.p
 												initial={{ opacity: 0, y: 20 }}
 												whileInView={{ opacity: 1, y: 0 }}
 												transition={{ delay: 0.4 }}
 												viewport={{ once: true }}
-												className="text-indigo-200 mb-4"
+												className="text-indigo-700 mb-4"
 											>
 												{lawyer.description}
 											</motion.p>
-											<ul className="text-blue-200 mb-4">
+											<ul className="text-blue-700 mb-4">
 												{lawyer.specialties.map((specialty, idx) => (
 													<motion.li
 														key={specialty}
@@ -98,17 +98,17 @@ export function About() {
 											</ul>
 											<Dialog>
 												<DialogTrigger asChild>
-													<Button className="w-full bg-white text-blue-900 hover:bg-blue-100">
+													<Button className="w-full bg-zinc-200 text-blue-900 hover:bg-zinc-300">
 														Ver Perfil Completo{" "}
 														<ChevronRight className="ml-2 h-4 w-4" />
 													</Button>
 												</DialogTrigger>
-												<DialogContent className="max-w-2xl bg-blue-900 text-white">
+												<DialogContent className="max-w-2xl bg-zinc-200 text-blue-700">
 													<DialogHeader>
 														<DialogTitle className="text-2xl font-bold">
 															{lawyer.name}
 														</DialogTitle>
-														<DialogDescription className="text-blue-200">
+														<DialogDescription className="text-blue-700">
 															{lawyer.title}
 														</DialogDescription>
 													</DialogHeader>
@@ -116,7 +116,7 @@ export function About() {
 														<h4 className="text-lg font-semibold mb-2">
 															Formação
 														</h4>
-														<ul className="list-disc list-inside text-blue-200">
+														<ul className="list-disc list-inside text-blue-700">
 															{lawyer.education.map((edu) => (
 																<li key={edu}>{edu}</li>
 															))}
@@ -130,9 +130,9 @@ export function About() {
 															{lawyer.expertise.map((exp) => (
 																<li
 																	key={exp}
-																	className="flex items-center text-blue-200"
+																	className="flex items-center text-blue-700"
 																>
-																	<ChevronRight className="mr-2 w-4 h-4 text-blue-400" />
+																	<ChevronRight className="mr-2 w-4 h-4 text-blue-500" />
 																	{exp}
 																</li>
 															))}
