@@ -10,7 +10,7 @@ export function Container({ children, className, ...props }: Props) {
 	return (
 		<section
 			className={cn(
-				"element-to-navigate section-spacing w-full min-h-[900px] mx-auto",
+				"element-to-navigate section-spacing w-full mx-auto",
 				className,
 			)}
 			{...props}

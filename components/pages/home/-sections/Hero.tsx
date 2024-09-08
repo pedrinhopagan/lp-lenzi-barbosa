@@ -11,7 +11,7 @@ export function Hero() {
 	return (
 		<Container
 			id="hero"
-			className="p-0 pt-8 lg:pt-16 relative overflow-hidden !max-h-[1200px]"
+			className="p-0 pt-8 lg:pt-16 relative overflow-hidden !max-h-[1200px] min-h-[900px]"
 		>
 			{/* Imagem de fundo */}
 			<Image

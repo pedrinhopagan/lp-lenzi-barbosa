@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/_ui/Navbar";
+import { BackToTop } from "@/components/_ui/BackToTop";
+import { WppButton } from "@/components/_ui/WppButton";
+import { Footer } from "@/components/_ui/Footer";
 
 const roboto = Roboto({
 	subsets: ["latin"],
@@ -31,7 +34,9 @@ export default function RootLayout({
 				<Navbar />
 				{children}
 				{/* <Analytics /> */}
-				{/* <BackToTop /> */}
+				<Footer />
+				<BackToTop />
+				<WppButton />
 			</body>
 		</html>
 	);
