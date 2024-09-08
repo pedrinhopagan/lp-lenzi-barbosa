@@ -42,7 +42,7 @@ export function About() {
 								alt={lawyer.name}
 								width={150}
 								height={150}
-								className="rounded-full mx-auto mb-6"
+								className="rounded-full mx-auto mb-6 max-w-[150px] max-h-[150px] object-cover"
 							/>
 							<h3 className="text-2xl font-bold mb-4 text-blue-500 text-center">
 								{lawyer.name}
@@ -105,7 +105,7 @@ export function About() {
 					<h3 className="text-2xl font-bold mb-6 text-blue-500">
 						Nossos Valores
 					</h3>
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 md:gap-8">
 						{[
 							{ icon: Award, text: "Ética" },
 							{ icon: Users, text: "Transparência" },
@@ -117,7 +117,7 @@ export function About() {
 								className="bg-zinc-100 p-4 rounded-lg flex flex-col items-center transition-all duration-300 hover:bg-zinc-200 hover:shadow-md"
 							>
 								<valor.icon className="w-8 h-8 mb-2 text-blue-500" />
-								<p className="text-lg font-semibold text-blue-500">
+								<p className="text-base font-semibold text-blue-500">
 									{valor.text}
 								</p>
 							</div>

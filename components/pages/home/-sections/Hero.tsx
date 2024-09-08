@@ -9,32 +9,32 @@ const img2 = images.logoCircleGradient;
 
 export function Hero() {
 	return (
-		<Container className="p-0 pt-8 lg:pt-16 min-h-screen relative overflow-hidden">
+		<Container className="p-0 pt-8 lg:pt-16 relative overflow-hidden !max-h-[1200px]">
 			{/* Imagem de fundo */}
 			<Image
 				src={images.heroBgTransparent}
 				alt="Escritório Lenzi e Barbosa"
 				fill
-				className="hidden md:block object-cover absolute top-0 left-0 z-0"
+				className="hidden md:block object-cover absolute top-0 left-0 z-0 max-h-[1200px]"
 			/>
 
 			{/* Gradiente de fundo */}
-			<div className="absolute inset-0 bg-gradient-to-b from-blue-500/50 to-zinc-100 z-10" />
+			<div className="absolute inset-0 bg-gradient-to-b from-blue-500/50 to-zinc-100 z-10 max-h-[1200px]" />
 
 			{/* Conteúdo principal */}
 			<div
 				id="hero-card"
-				className="relative z-20 flex flex-col lg:flex-row items-center justify-between mt-12 md:mt-20 lg:mt-32 bg-zinc-50/70 rounded-md p-8 xl:p-16 lg:p-20 gap-12 mx-auto max-w-7xl pb-80"
+				className="relative z-20 flex flex-col lg:flex-row items-center justify-between mt-12 md:mt-20 lg:mt-32 bg-zinc-50/70 rounded-md p-8 xl:p-16 lg:p-20 gap-12 mx-auto max-w-7xl pb-80 max-md:min-h-[80vh] max-h-[1200px]"
 			>
 				{/* Coluna de texto */}
-				<div className="lg:w-1/2 space-y-8 h-full flex flex-col justify-center">
+				<div className="lg:w-1/2 space-y-8 h-full flex flex-col justify-center max-lg:items-center">
 					{/* Texto pequeno no topo */}
 					<p className="text-xs text-blue-400 mb-2 text-center lg:text-left">
 						Escritório de Advocacia
 					</p>
 
 					{/* Título principal */}
-					<h1 className="text-3xl lg:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-500 text-center lg:text-left">
+					<h1 className="text-3xl lg:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-500 text-center lg:text-left max-w-lg">
 						Protegendo Seus Direitos com Integridade e Dedicação
 					</h1>
 
