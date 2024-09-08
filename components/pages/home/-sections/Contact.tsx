@@ -61,7 +61,7 @@ export function Contact() {
 
 			<div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24">
 				<div className="lg:w-1/2 space-y-8">
-					<h2 className="text-5xl lg:text-6xl font-bold text-blue-700 lg:leading-tight">
+					<h2 className="text-5xl lg:text-6xl font-bold text-blue-700 ">
 						Vamos conversar sobre o seu caso
 					</h2>
 					<p className="text-xl text-blue-600">

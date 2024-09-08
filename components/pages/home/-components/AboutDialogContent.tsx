@@ -10,9 +10,9 @@ import { Briefcase, X } from "lucide-react";
 export function MirellaDialogContent() {
 	return (
 		<DialogContent className="max-w-2xl bg-zinc-50 max-h-[80vh] overflow-y-auto">
-			<DialogHeader className="bg-zinc-50 z-10 pb-4 sticky top-0 w-full">
-				<DialogTitle>Mirella Lenzi</DialogTitle>
-				<DialogDescription>
+			<DialogHeader className="bg-zinc-50 z-10 pb-4 sticky top-0 w-full flex flex-col justify-between">
+				<DialogTitle className="max-w-2/3">Mirella Lenzi</DialogTitle>
+				<DialogDescription className="max-w-2/3 text-start">
 					Advogada especializada em Direito Civil e Empresarial
 				</DialogDescription>
 			</DialogHeader>

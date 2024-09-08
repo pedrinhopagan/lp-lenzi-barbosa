@@ -42,7 +42,7 @@ export function Testimonials() {
 								className="md:basis-1/2 lg:basis-1/3"
 							>
 								<div className="p-1">
-									<Card className="bg-white shadow-lg border-blue-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+									<Card className="bg-white border-blue-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
 										<CardContent className="flex flex-col aspect-square p-6">
 											<Quote className="w-8 h-8 text-blue-400 mb-4" />
 											<p className="text-blue-700 flex-grow">
@@ -62,11 +62,8 @@ export function Testimonials() {
 							</CarouselItem>
 						))}
 					</CarouselContent>
-					<div className="hidden md:flex justify-between mt-4">
-						<CarouselPrevious className="text-blue-500 -left-12" />
-						<CarouselNext className="text-blue-500 -right-12" />
-					</div>
-					<div className="flex md:hidden justify-center mt-4 gap-4">
+
+					<div className="flex justify-center mt-4 gap-4">
 						<CarouselPrevious className="text-blue-500 static translate-y-0" />
 						<CarouselNext className="text-blue-500 static translate-y-0" />
 					</div>

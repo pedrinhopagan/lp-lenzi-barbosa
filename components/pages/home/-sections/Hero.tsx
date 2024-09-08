@@ -2,6 +2,7 @@ import { Container } from "@/components/_ui/Container";
 import { Navbar } from "@/components/_ui/Navbar";
 import { Button } from "@/components/ui/button";
 import images from "@/contants/images";
+import { LinkNavigation } from "@/lib/link_navigation";
 import Image from "next/image";
 
 const img1 = images.heroImage;
@@ -11,7 +12,7 @@ export function Hero() {
 	return (
 		<Container
 			id="hero"
-			className="p-0 pt-8 lg:pt-16 relative overflow-hidden !max-h-[1200px] min-h-[900px]"
+			className="p-0 pt-8 relative overflow-hidden !max-h-[1200px] lg:min-h-[900px] h-fit"
 		>
 			{/* Imagem de fundo */}
 			<Image
@@ -27,12 +28,12 @@ export function Hero() {
 			{/* Conteúdo principal */}
 			<div
 				id="hero-card"
-				className="relative z-20 flex flex-col lg:flex-row items-center justify-between mt-12 md:mt-20 lg:mt-32 bg-zinc-50/70 rounded-md p-8 xl:p-16 lg:p-20 gap-12 mx-auto max-w-7xl pb-80 max-md:min-h-[80vh] max-h-[1200px]"
+				className="relative z-20 flex flex-col lg:flex-row items-center justify-between mt-12 md:mt-20 lg:mt-32 bg-zinc-50/70 rounded-md p-8 lg:p-6 xl:p-16 gap-12 mx-auto max-w-7xl pb-80 sm:pb-[440px] max-md:min-h-[80vh] max-h-[1200px] shadow-md"
 			>
 				{/* Coluna de texto */}
-				<div className="lg:w-1/2 space-y-8 h-full flex flex-col justify-center max-lg:items-center">
+				<div className="lg:w-1/2 gap-8 h-full flex flex-col justify-center max-lg:items-center">
 					{/* Texto pequeno no topo */}
-					<p className="text-xs text-blue-400 mb-2 text-center lg:text-left">
+					<p className="text-xs text-blue-400 mb-2 text-center lg:text-left hidden md:block">
 						Escritório de Advocacia
 					</p>
 
@@ -50,11 +51,21 @@ export function Hero() {
 
 					{/* Botões de ação */}
 					<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-						<Button className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full transition duration-300">
-							Conheça Nossos Serviços
+						<Button
+							asChild
+							variant="default"
+							className=" bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full transition duration-300"
+						>
+							<LinkNavigation id="contact">Agende uma Consulta</LinkNavigation>
 						</Button>
-						<Button className="bg-transparent hover:bg-blue-400 hover:text-white text-blue-400 font-bold py-2 px-6 rounded-full border-2 border-blue-400 transition duration-300">
-							Agende uma Consulta
+						<Button
+							asChild
+							variant="outline"
+							className="bg-transparent hover:bg-blue-400 hover:text-white text-blue-400 font-bold py-2 px-6 rounded-full border-2 border-blue-400 transition duration-300"
+						>
+							<LinkNavigation id="services">
+								Conheça Nossos Serviços
+							</LinkNavigation>
 						</Button>
 					</div>
 
@@ -77,7 +88,7 @@ export function Hero() {
 						src={images.heroBgTransparentMobile}
 						alt="Escritório Lenzi e Barbosa"
 						fill
-						className="lg:hidden bottom-0 rounded-lg shadow-2xl object-contain"
+						className="lg:hidden bottom-0 rounded-lg object-contain"
 					/>
 				</div>
 
@@ -85,7 +96,7 @@ export function Hero() {
 					src={images.heroBgTransparent}
 					alt="Escritório Lenzi e Barbosa"
 					fill
-					className="hidden lg:block rounded-lg shadow-2xl object-contain absolute top-0 left-0 -z-10"
+					className="hidden lg:block rounded-lg object-contain absolute top-0 left-0 -z-10"
 				/>
 			</div>
 		</Container>

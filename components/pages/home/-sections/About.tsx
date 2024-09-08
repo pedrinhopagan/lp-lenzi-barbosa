@@ -66,8 +66,8 @@ export function About() {
 										<Button className="w-full">Mais Informações</Button>
 									</DialogTrigger>
 									<DialogContent className="max-w-2xl bg-zinc-50 max-h-[80vh] overflow-y-auto">
-										<DialogHeader className="bg-zinc-50 z-10 pb-4 sticky top-0 w-fit">
-											<div className="flex justify-between items-center">
+										<DialogHeader className="bg-zinc-50 z-10 pb-4 sticky top-0 w-fit max-w-[95%] text-start">
+											<div className="flex justify-between items-center ">
 												<DialogTitle className="w-fit">
 													{lawyer.name}
 												</DialogTitle>

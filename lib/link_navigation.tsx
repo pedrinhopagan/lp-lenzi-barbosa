@@ -1,3 +1,5 @@
+"use client";
+
 interface LinkNavigationProps {
 	id: string;
 	className?: string;
