@@ -20,68 +20,9 @@ import {
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { WaveDivider } from "../-components/WaveDivider";
+import { areasAtuacao, diferenciais } from "@/contants/home-page";
 
 export function Services() {
-	const areasAtuacao = [
-		{
-			icon: Scale,
-			title: "Direito Civil",
-			description:
-				"Consultoria e resolução de disputas contratuais, danos morais e questões de responsabilidade civil.",
-		},
-		{
-			icon: Briefcase,
-			title: "Direito Trabalhista",
-			description:
-				"Defesa dos direitos de trabalhadores e empresas em ações judiciais e extrajudiciais.",
-		},
-		{
-			icon: Users,
-			title: "Direito de Família",
-			description:
-				"Acompanhamento em processos de divórcio, guarda, pensão alimentícia e adoção.",
-		},
-		{
-			icon: Lightbulb,
-			title: "Direito Empresarial",
-			description:
-				"Auxílio a empresas com planejamento jurídico, contratos e questões societárias.",
-		},
-		{
-			icon: Heart,
-			title: "Direito Previdenciário",
-			description:
-				"Orientação e defesa em questões relacionadas à aposentadoria e benefícios do INSS.",
-		},
-		{
-			icon: Home,
-			title: "Direito Imobiliário",
-			description:
-				"Assessoria em compra, venda e locação de imóveis, regularização e disputas de propriedade.",
-		},
-	];
-
-	const diferenciais = [
-		{
-			icon: Globe,
-			title: "Atendimento à Distância",
-			description:
-				"Consultoria e acompanhamento jurídico remoto para sua comodidade.",
-		},
-		{
-			icon: Star,
-			title: "Experiência Especializada",
-			description:
-				"Profissionais com vasta experiência em casos complexos e abordagem humanizada.",
-		},
-		{
-			icon: Users,
-			title: "Atendimento Personalizado",
-			description:
-				"Soluções jurídicas adaptadas às necessidades específicas de cada cliente.",
-		},
-	];
-
 	return (
 		<Container className="py-12 lg:py-24 bg-gradient-to-b from-zinc-100 to-zinc-50 relative">
 			<WaveDivider inverted color="fill-indigo-900" />

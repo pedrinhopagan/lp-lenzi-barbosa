@@ -18,33 +18,33 @@ export function Footer() {
 					<div className="flex flex-col items-center lg:items-start">
 						{/* Logo */}
 						<Image
-							src={images.logoNameLight}
+							src={images.logoGradient}
 							alt="Lenzi e Barbosa"
 							className="h-12 w-auto mb-6"
 						/>
 						{/* Descrição do escritório */}
-						<p className="text-sm text-blue-300 text-center lg:text-left mb-6">
+						<p className="text-sm text-cyan-200 text-center lg:text-left mb-6">
 							Advocacia especializada com integridade e dedicação.
 						</p>
 						{/* Informações de contato */}
 						<div className="flex flex-col items-center lg:items-start gap-6">
-							<h3 className="text-xl font-semibold mb-4 text-blue-200">
+							<h3 className="text-xl font-semibold mb-4 text-blue-300">
 								Contato
 							</h3>
 							<div className="flex items-center space-x-4">
-								<Mail className="w-5 h-5 text-blue-300" />
+								<Mail className="w-5 h-5 text-cyan-200" />
 								<a
 									href="mailto:contato@lenziebarbosa.com"
-									className="text-sm text-blue-300 hover:underline"
+									className="text-sm text-cyan-200 hover:underline"
 								>
 									contato@lenziebarbosa.com
 								</a>
 							</div>
 							<div className="flex items-center space-x-4">
-								<Phone className="w-5 h-5 text-blue-300" />
+								<Phone className="w-5 h-5 text-cyan-200" />
 								<a
 									href={`tel:${PHONE_NUMBER}`}
-									className="text-sm text-blue-300 hover:underline"
+									className="text-sm text-cyan-200 hover:underline"
 								>
 									{PHONE_NUMBER.replace(
 										/(\d{2})(\d{2})(\d{1})(\d{4})(\d{4})/,
@@ -53,10 +53,10 @@ export function Footer() {
 								</a>
 							</div>
 							<div className="flex items-center space-x-4">
-								<Instagram className="w-5 h-5 text-blue-300" />
+								<Instagram className="w-5 h-5 text-cyan-200" />
 								<a
 									href="https://www.instagram.com/lenziebarbosa/"
-									className="text-sm text-blue-300 hover:underline"
+									className="text-sm text-cyan-200 hover:underline"
 									aria-label="Instagram"
 								>
 									@lenziebarbosa
@@ -67,7 +67,7 @@ export function Footer() {
 
 					{/* Coluna direita: Links rápidos */}
 					<div className="flex flex-col items-center lg:items-end">
-						<h3 className="text-xl font-semibold mb-6 text-blue-200 text-center lg:text-end">
+						<h3 className="text-xl font-semibold mb-6 text-blue-300 text-center lg:text-end">
 							Links Rápidos
 						</h3>
 						<nav>
@@ -77,7 +77,7 @@ export function Footer() {
 										<Button
 											variant="link"
 											asChild
-											className="p-0 w-full justify-center lg:justify-end"
+											className="p-0 w-full justify-center lg:justify-end text-cyan-100"
 										>
 											<LinkNavigation
 												id={link.id}

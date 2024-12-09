@@ -42,7 +42,7 @@ export function Testimonials() {
 					}}
 					className="w-full mx-auto"
 				>
-					<CarouselContent>
+					<CarouselContent className="pb-8">
 						{testimonials.map((testimonial, index) => (
 							<CarouselItem
 								key={testimonial.author}
@@ -70,7 +70,7 @@ export function Testimonials() {
 						))}
 					</CarouselContent>
 
-					<div className="flex justify-center mt-4 gap-4">
+					<div className="flex justify-center gap-4">
 						<CarouselPrevious className="text-blue-500 static translate-y-0" />
 						<CarouselNext className="text-blue-500 static translate-y-0" />
 					</div>

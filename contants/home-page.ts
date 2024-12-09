@@ -1,3 +1,16 @@
+import {
+	Scale,
+	Briefcase,
+	Users,
+	Lightbulb,
+	Heart,
+	Home,
+	Globe,
+	Star,
+	Brain,
+	ShoppingCart,
+	Shield,
+} from "lucide-react";
 import images from "./images";
 
 // -------------------------------------------------------------------------------------------------
@@ -34,50 +47,114 @@ export const navLinks = [
 
 export const lawyers = [
 	{
-		name: "Mirella Lenzi",
-		title: "Advogada especializada em Direito Civil e Empresarial",
+		name: "Mirella Marson Lenzi",
+		title: "Advogada especializada em Direito Penal e Defesa da Mulher",
 		description:
-			"Dra. Mirella Lenzi é uma advogada com mais de 10 anos de experiência, conhecida por sua abordagem estratégica em casos complexos.",
+			"Dra. Mirella Marson Lenzi é advogada formada em Direito pela PUC-Campinas e pós graduada em Direito Penal e Processo Penal pela Escola Brasileira de Direito.",
 		image: images.aboutMirella,
 		specialties: [
-			"Direito Civil",
-			"Direito Empresarial",
-			"Consultoria Jurídica",
+			"Direito Criminal",
+			"Consultoria em Defesa da Mulher",
+			"Direito do Consumidor",
 		],
 		education: [
-			"Graduação em Direito - USP",
-			"Mestrado em Direito Empresarial - FGV",
-			"Especialização em Contratos Internacionais - Harvard Law School",
+			"Graduação em Direito - PUC-Campinas",
+			"Especialização em Direito Penal e Processo Penal - Escola Brasileira de Direito",
 		],
 		expertise: [
-			"Contratos e Direito Societário",
-			"Fusões e Aquisições",
-			"Compliance e Governança",
-			"Resolução de Disputas",
+			"Direito Criminal",
+			"Consultoria em Defesa da Mulher",
+			"Direito do Consumidor",
+			"Direito de Família",
+			"Direito Civil",
+			"Direito Empresarial",
 		],
 	},
 	{
 		name: "Amanda Barbosa",
 		title: "Especialista em Direito do Trabalho e Previdenciário",
 		description:
-			"Dra. Amanda Barbosa é reconhecida por sua abordagem humanizada e soluções inovadoras em casos trabalhistas e previdenciários.",
+			"Dra. Amanda Barbosa é advogada formada em Direito pela PUC-Campinas e pós graduada em Direito Processual Civil pela PUC-SP.",
 		image: images.aboutAmanda,
-		specialties: [
-			"Direito do Trabalho",
-			"Direito Previdenciário",
-			"Resolução de Conflitos",
-		],
+		specialties: ["Direito da Saúde", "Direito Civil", "Direito Médico"],
 		education: [
-			"Graduação em Direito - UFRJ",
-			"Especialização em Direito do Trabalho - PUC-RJ",
-			"Mestrado em Direito Previdenciário - USP",
+			"Graduação em Direito - PUC-Campinas",
+			"Especialização em Direito Processual Civil - PUC-SP",
+			"Cursos de Extensão em Direito Digital e Proteção de Dados - PUC-SP",
+			"Direito para Startups - FGV",
 		],
 		expertise: [
-			"Direito Trabalhista",
-			"Direito Previdenciário",
-			"Negociações Sindicais",
-			"Compliance e Auditoria",
+			"Direito da Saúde",
+			"Direito Civil",
+			"Direito Médico",
+			"Direito Digital",
+			"Direito de Proteção de Dados",
+			"Propriedade Intelectual",
 		],
+	},
+];
+
+// -------------------------------------------------------------------------------------------------
+// ----------------------------------- Services --------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+
+export const diferenciais = [
+	{
+		icon: Globe,
+		title: "Atendimento à Distância",
+		description:
+			"Consultoria e acompanhamento jurídico remoto para sua comodidade.",
+	},
+	{
+		icon: Star,
+		title: "Experiência Especializada",
+		description:
+			"Profissionais com vasta experiência em casos complexos e abordagem humanizada.",
+	},
+	{
+		icon: Users,
+		title: "Atendimento Personalizado",
+		description:
+			"Soluções jurídicas adaptadas às necessidades específicas de cada cliente.",
+	},
+];
+
+export const areasAtuacao = [
+	{
+		icon: Heart,
+		title: "Direito Médico e da Saúde",
+		description:
+			"Assistência em questões relacionadas à saúde e medicina, incluindo defesa de médicos e enfermeiros.",
+	},
+	{
+		icon: Shield,
+		title: "Direito Penal",
+		description:
+			"Assessoria em questões criminais, defesa de acusados e defesa de vítimas.",
+	},
+	{
+		icon: Scale,
+		title: "Direito Civil",
+		description:
+			"Consultoria e resolução de disputas contratuais, danos morais e questões de responsabilidade civil.",
+	},
+	{
+		icon: Users,
+		title: "Direito de Família",
+		description:
+			"Acompanhamento em processos de divórcio, guarda, pensão alimentícia e adoção.",
+	},
+	{
+		icon: Brain,
+		title: "Propriedade Intelectual",
+		description:
+			"Assistência em questões relacionadas à propriedade intelectual, patentes e marcas.",
+	},
+	{
+		icon: ShoppingCart,
+		title: "Direito do Consumidor",
+		description:
+			"Assistência em questões relacionadas ao consumo de produtos e serviços, incluindo defesa de consumidores e reclamações.",
 	},
 ];
 
@@ -87,33 +164,39 @@ export const lawyers = [
 
 export const testimonials = [
 	{
-		text: "O atendimento do escritório Lenzi e Barbosa superou minhas expectativas. Sempre disponíveis e com soluções claras e eficazes, eles foram fundamentais para o sucesso do meu processo.",
-		author: "Carolina M.",
+		text: "Atendimento de alta qualidade! Fui muito bem recepcionado desde o início do meu processo. Me senti muito seguro e amparado! Recomendo fortemente!",
+		author: "Pedro Antônio Pagan",
 		role: "Cliente de Direito Civil",
+		source: "Google Reviews",
 	},
 	{
-		text: "Mirella Lenzi e Amanda Barbosa foram extremamente profissionais e atenciosas durante todo o processo. Me senti seguro e bem representado em cada etapa.",
-		author: "João P.",
-		role: "Cliente de Direito Empresarial",
+		text: "Excelentes profissionais!! Foram muito atenciosas e me senti seguro o tempo todo de que estava em boas mãos.",
+		author: "Victor Marcelino Nunes",
+		role: "Cliente de Direito Penal",
+		source: "Google Reviews",
 	},
 	{
-		text: "A equipe do escritório é muito dedicada e competente. Resolvi minha questão trabalhista de maneira rápida e eficiente, graças à sua expertise.",
-		author: "Lucas F.",
+		text: "Profissionais super qualificadas, educadas e atenciosas. Ótimo atendimento!",
+		author: "Beatriz Avancini",
 		role: "Cliente de Direito Trabalhista",
+		source: "Google Reviews",
 	},
 	{
-		text: "A abordagem personalizada e o conhecimento jurídico profundo da Lenzi e Barbosa foram cruciais para o sucesso do meu caso de direito de família. Recomendo fortemente seus serviços.",
-		author: "Mariana S.",
-		role: "Cliente de Direito de Família",
+		text: "A Dra. Amanda é uma profissional extremamente qualificada e preparada nas suas atuações, o que reflete em um trabalho excelente e confiável. Recomendo.",
+		author: "Eduardo Ferraz",
+		role: "Cliente de Direito da Saúde",
+		source: "Google Reviews",
 	},
 	{
-		text: "Enfrentei um processo complexo de propriedade intelectual, mas a equipe da Lenzi e Barbosa simplificou tudo. Sua expertise nessa área é verdadeiramente impressionante.",
-		author: "Rafael T.",
+		text: "Ótimas advogadas, atendimento excelente. São super competentes e resolveram meu problema!",
+		author: "Beatriz Pereira Vieira",
 		role: "Cliente de Direito de Propriedade Intelectual",
+		source: "Google Reviews",
 	},
 	{
-		text: "Quando precisei de assistência em direito imobiliário, a Lenzi e Barbosa foi excepcional. Sua atenção aos detalhes e comunicação clara tornaram todo o processo tranquilo.",
-		author: "Beatriz L.",
-		role: "Cliente de Direito Imobiliário",
+		text: "Excelente escritório. As advogadas são atenciosas e profissionais. Recomendo..",
+		author: "Natália Vollet",
+		role: "Cliente de Direito do Consumidor",
+		source: "Google Reviews",
 	},
 ];
