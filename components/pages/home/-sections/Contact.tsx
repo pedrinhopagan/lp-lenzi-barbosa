@@ -2,105 +2,33 @@
 
 import { Container } from "@/components/_ui/Container";
 import { Button } from "@/components/ui/button";
+import { PHONE_NUMBER, WHATSAPP_NUMBER } from "@/contants/home-page";
 import {
-	Form,
-	FormControl,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import {
-	Mail,
-	Phone,
-	MapPin,
-	Facebook,
-	Instagram,
-	Linkedin,
-	MessageCircle,
 	Globe,
+	Instagram,
+	Mail,
+	MapPin,
+	MessageCircle,
+	Phone,
 } from "lucide-react";
-import { PHONE_NUMBER } from "@/contants/home-page";
-import emailjs from "@emailjs/browser";
-import { emailJSConfig } from "@/contants/home-page";
 import { useState } from "react";
 
 // Definição do esquema de validação do formulário
-const formSchema = z.object({
-	nome: z.string().min(2, {
-		message: "O nome deve ter pelo menos 2 caracteres.",
-	}),
-	email: z.string().email({
-		message: "Por favor, insira um endereço de e-mail válido.",
-	}),
-	telefone: z.string().min(10, {
-		message: "Por favor, insira um número de telefone válido.",
-	}),
-	mensagem: z.string().min(10, {
-		message: "A mensagem deve ter pelo menos 10 caracteres.",
-	}),
-});
 
 // Componente principal da seção de Contato
 export function Contact() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	// Configuração do formulário usando react-hook-form e zod
-	const form = useForm<z.infer<typeof formSchema>>({
-		resolver: zodResolver(formSchema),
-		defaultValues: {
-			nome: "",
-			email: "",
-			telefone: "",
-			mensagem: "",
-		},
-	});
 
 	// Função atualizada para lidar com o envio do formulário
-	function onSubmit(values: z.infer<typeof formSchema>) {
-		setIsSubmitting(true);
-		emailjs
-			.send(
-				emailJSConfig.serviceID,
-				emailJSConfig.templateID,
-				{
-					from_name: values.nome,
-					from_email: values.email,
-					phone: values.telefone,
-					message: values.mensagem,
-				},
-				emailJSConfig.publicKey,
-			)
-			.then((response) => {
-				console.log(
-					"E-mail enviado com sucesso!",
-					response.status,
-					response.text,
-				);
-				form.reset();
-				// Aqui você pode adicionar uma notificação de sucesso
-			})
-			.catch((err) => {
-				console.error("Erro ao enviar e-mail:", err);
-				// Aqui você pode adicionar uma notificação de erro
-			})
-			.finally(() => {
-				setIsSubmitting(false);
-			});
-	}
 
 	return (
 		<Container className="relative py-16 lg:py-24 bg-gradient-to-b from-blue-400 to-blue-900">
 			<span id="contact" className="element-to-navigate" />
 
-			<div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24">
-				{/* Coluna de informações de contato */}
-				<div className="lg:w-1/2 space-y-8">
+			<div className="max-w-2xl mx-auto flex text-center flex-col lg:flex-row gap-12 lg:gap-24">
+				<div className=" space-y-8">
 					<h2 className="text-5xl lg:text-6xl font-bold text-white">
 						Vamos conversar sobre o seu caso
 					</h2>
@@ -110,7 +38,7 @@ export function Contact() {
 						podemos auxiliar você.
 					</p>
 
-					<div className="space-y-6">
+					<div className="space-y-6 flex flex-col items-center">
 						{/* Informações de contato */}
 						<div className="flex items-center space-x-4">
 							<Mail className="w-6 h-6 text-blue-300" />
@@ -137,7 +65,7 @@ export function Contact() {
 							</a>
 						</div>
 
-						<div className="flex flex-col space-y-2">
+						<div className="flex flex-col space-y-2 items-center">
 							<div className="flex items-center space-x-4">
 								<MapPin className="w-6 h-6 text-blue-300 flex-shrink-0" />
 								<span className="text-lg text-blue-200">
@@ -165,7 +93,7 @@ export function Contact() {
 							className="flex-1 bg-green-500 text-white hover:bg-green-600 font-semibold py-2 px-4 rounded-md transition duration-300"
 						>
 							<a
-								href={`https://wa.me/${PHONE_NUMBER}`}
+								href={`https://wa.me/${WHATSAPP_NUMBER}`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -192,14 +120,14 @@ export function Contact() {
 				</div>
 
 				{/* Coluna do formulário de contato */}
-				<div className="lg:w-1/2 bg-blue-800/30 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+				{/* <div className="lg:w-1/2 bg-blue-800/30 backdrop-blur-sm p-8 rounded-lg shadow-lg">
 					<h3 className="text-2xl font-bold mb-6 text-white">
 						Envie-nos uma mensagem
 					</h3>
 
 					<Form {...form}>
 						<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-							{/* Campo de nome */}
+						
 							<FormField
 								control={form.control}
 								name="nome"
@@ -218,7 +146,7 @@ export function Contact() {
 								)}
 							/>
 
-							{/* Campo de e-mail */}
+						
 							<FormField
 								control={form.control}
 								name="email"
@@ -237,7 +165,7 @@ export function Contact() {
 								)}
 							/>
 
-							{/* Campo de telefone */}
+							
 							<FormField
 								control={form.control}
 								name="telefone"
@@ -256,7 +184,7 @@ export function Contact() {
 								)}
 							/>
 
-							{/* Campo de mensagem */}
+							
 							<FormField
 								control={form.control}
 								name="mensagem"
@@ -275,7 +203,7 @@ export function Contact() {
 								)}
 							/>
 
-							{/* Botão de envio atualizado */}
+							
 							<Button
 								type="submit"
 								className="w-full bg-blue-100 hover:bg-blue-200 text-blue-900 font-bold py-3 px-4 rounded-md transition duration-300"
@@ -285,7 +213,7 @@ export function Contact() {
 							</Button>
 						</form>
 					</Form>
-				</div>
+				</div> */}
 			</div>
 		</Container>
 	);

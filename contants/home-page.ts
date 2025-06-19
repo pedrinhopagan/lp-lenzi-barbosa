@@ -1,15 +1,12 @@
 import {
-	Scale,
-	Briefcase,
-	Users,
-	Lightbulb,
-	Heart,
-	Home,
-	Globe,
-	Star,
 	Brain,
-	ShoppingCart,
+	Globe,
+	Heart,
+	Scale,
 	Shield,
+	ShoppingCart,
+	Star,
+	Users,
 } from "lucide-react";
 import images from "./images";
 
@@ -18,6 +15,7 @@ import images from "./images";
 // -------------------------------------------------------------------------------------------------
 
 export const PHONE_NUMBER = "5519989061324";
+export const WHATSAPP_NUMBER = "5519991108817";
 
 // -------------------------------------------------------------------------------------------------
 // ----------------------------------- EmailJS Config ----------------------------------------------
@@ -166,37 +164,31 @@ export const testimonials = [
 	{
 		text: "Atendimento de alta qualidade! Fui muito bem recepcionado desde o início do meu processo. Me senti muito seguro e amparado! Recomendo fortemente!",
 		author: "Pedro Antônio Pagan",
-		role: "Cliente de Direito Civil",
 		source: "Google Reviews",
 	},
 	{
 		text: "Excelentes profissionais!! Foram muito atenciosas e me senti seguro o tempo todo de que estava em boas mãos.",
 		author: "Victor Marcelino Nunes",
-		role: "Cliente de Direito Penal",
 		source: "Google Reviews",
 	},
 	{
 		text: "Profissionais super qualificadas, educadas e atenciosas. Ótimo atendimento!",
 		author: "Beatriz Avancini",
-		role: "Cliente de Direito Trabalhista",
 		source: "Google Reviews",
 	},
 	{
 		text: "A Dra. Amanda é uma profissional extremamente qualificada e preparada nas suas atuações, o que reflete em um trabalho excelente e confiável. Recomendo.",
 		author: "Eduardo Ferraz",
-		role: "Cliente de Direito da Saúde",
 		source: "Google Reviews",
 	},
 	{
 		text: "Ótimas advogadas, atendimento excelente. São super competentes e resolveram meu problema!",
 		author: "Beatriz Pereira Vieira",
-		role: "Cliente de Direito de Propriedade Intelectual",
 		source: "Google Reviews",
 	},
 	{
 		text: "Excelente escritório. As advogadas são atenciosas e profissionais. Recomendo..",
 		author: "Natália Vollet",
-		role: "Cliente de Direito do Consumidor",
 		source: "Google Reviews",
 	},
 ];

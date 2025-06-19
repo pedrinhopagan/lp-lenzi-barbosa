@@ -1,4 +1,5 @@
 import { Container } from "@/components/_ui/Container";
+import { Card, CardContent } from "@/components/ui/card";
 import {
 	Carousel,
 	CarouselContent,
@@ -6,9 +7,8 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
-import { Quote } from "lucide-react";
 import { testimonials } from "@/contants/home-page";
+import { Quote } from "lucide-react";
 import { WaveDivider } from "../-components/WaveDivider";
 
 export function Testimonials() {
@@ -43,7 +43,7 @@ export function Testimonials() {
 					className="w-full mx-auto"
 				>
 					<CarouselContent className="pb-8">
-						{testimonials.map((testimonial, index) => (
+						{testimonials.map((testimonial) => (
 							<CarouselItem
 								key={testimonial.author}
 								className="basis-[85%] sm:basis-[45%] lg:basis-[30%] pl-2 md:pl-4"
@@ -59,9 +59,15 @@ export function Testimonials() {
 												<p className="font-semibold text-blue-800">
 													{testimonial.author}
 												</p>
-												<p className="text-sm text-blue-500">
-													{testimonial.role}
-												</p>
+												<div className="flex items-center gap-2 text-sm text-blue-500">
+													<div className="flex">{"★".repeat(5)}</div>
+													<a
+														href="https://www.google.com.br/maps/place/Lenzi+%26+Barbosa+Advogados+Associados/@-22.7017821,-46.7705559,17z/data=!3m1!4b1!4m6!3m5!1s0x94c9211262c5b84f:0x22d3e2cbf564e6ec!8m2!3d-22.7017871!4d-46.767981!16s%2Fg%2F11tdck2bz6?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDYxNi4wIKXMDSoASAFQAw%3D%3D"
+														className="text-xs"
+													>
+														Importada de google.com
+													</a>
+												</div>
 											</div>
 										</CardContent>
 									</Card>

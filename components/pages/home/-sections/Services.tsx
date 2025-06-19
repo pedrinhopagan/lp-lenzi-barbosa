@@ -1,26 +1,20 @@
 "use client";
 
 import { Container } from "@/components/_ui/Container";
-import { Button } from "@/components/ui/button";
-import {
-	Scale,
-	Briefcase,
-	Users,
-	Lightbulb,
-	Heart,
-	Globe,
-	Star,
-	Home,
-} from "lucide-react";
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import {
+	WHATSAPP_NUMBER,
+	areasAtuacao,
+	diferenciais,
+} from "@/contants/home-page";
 import { motion } from "framer-motion";
 import { WaveDivider } from "../-components/WaveDivider";
-import { areasAtuacao, diferenciais } from "@/contants/home-page";
 
 export function Services() {
 	return (
@@ -105,9 +99,15 @@ export function Services() {
 				</div>
 
 				<div className="mt-12 text-center">
-					<Button className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full transition duration-300">
-						Agende uma Consulta Online
-					</Button>
+					<a
+						href={`https://wa.me/${WHATSAPP_NUMBER}`}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Button className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+							Agende uma Consulta Online
+						</Button>
+					</a>
 				</div>
 
 				<p className="text-blue-500 text-center mt-8 italic">

@@ -1,13 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_NUMBER } from "@/contants/home-page";
 import { MessageCircle } from "lucide-react";
-import { PHONE_NUMBER } from "@/contants/home-page";
 
 export function WppButton() {
 	return (
 		<a
-			href={`https://wa.me/${PHONE_NUMBER}`}
+			href={`https://wa.me/${WHATSAPP_NUMBER}`}
 			target="_blank"
 			rel="noopener noreferrer"
 			className="fixed bottom-4 left-4 z-50"
